@@ -13,7 +13,7 @@ if($_SERVER['DOCUMENT_ROOT']='/var/www/html') //if local
 }
 else //remote
 {
-    $config_path = 'home1/adamsmit/mysql.php';
+    $config_path = '/home1/adamsmit/mysql.php';
 }
 
 include $config_path;
