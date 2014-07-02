@@ -7,7 +7,7 @@ ini_set( 'display_errors','1');
 //mysql.php
 //place at root so that it can be the same locally and remotely.
 //needs testing on server
-if($_SERVER['DOCUMENT_ROOT']='/var/www/html') //if local
+if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
 {
     $config_path = 'mysql.php';
 }
