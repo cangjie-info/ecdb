@@ -7,7 +7,16 @@ ini_set( 'display_errors','1');
 //mysql.php
 //place at root so that it can be the same locally and remotely.
 //needs testing on server
-include '/mysql.php';
+if($_SERVER['DOCUMENT_ROOT']='/var/www/html') //if local
+{
+    $config_path = 'mysql.php';
+}
+else //remote
+{
+    $config_path = 'home1/adamsmit/mysql.php';
+}
+
+include $config_path;
 
 $link = mysqli_connect($db_host, $db_user, $db_pw);
 if (!$link)
