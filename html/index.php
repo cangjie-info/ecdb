@@ -5,13 +5,13 @@ ini_set( 'display_errors','1');
 
 //all php files that access MySQL need to get credentials from
 //mysql.php
-//place at root so that it can be the same locally and remotely.
-//needs testing on server
+//place outside web root for security
+//code to guess whether we are remote or local
 if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
 {
     $config_path = 'mysql.php';
 }
-else //remote
+else //if remote
 {
     $config_path = '/home1/adamsmit/mysql.php';
 }
@@ -39,7 +39,7 @@ if (!mysqli_select_db($link, $db_prefix . "ecdb"))
     include 'error.html.php';
     exit();
 }
-
+//we only get this far if a connection to ecdb is possible
 include 'home.html.php';
 
 ?>

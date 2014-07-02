@@ -8,7 +8,7 @@
 
 <p>
 <?php 
-//comment out before pushing to web
+//comment out before pushing to html_public
 error_reporting(E_ALL);
 ini_set( 'display_errors','1'); 
 echo "$output"; 

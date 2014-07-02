@@ -9,12 +9,12 @@
 <p>
 <?php
 
-//comment out error reporting before pushing online
+//comment out error reporting before pushing to html_public
 error_reporting(E_ALL);
 ini_set( 'display_errors','1');
 
 echo 'Succesfully connected to MySQL ECDB. PHP working.\n';
-print_r($_SERVER);
+
 ?>
 </p>
 
