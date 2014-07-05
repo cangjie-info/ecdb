@@ -13,7 +13,7 @@
 error_reporting(E_ALL);
 ini_set( 'display_errors','1');
 
-echo 'Succesfully connected to MySQL ECDB. PHP working.\n';
+echo "Succesfully connected to MySQL ECDB. PHP working.\n";
 
 ?>
 </p>
