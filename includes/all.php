@@ -12,7 +12,7 @@ ini_set( 'display_errors','1');
 if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
 {
     $config_path = '/var/www/html/mysql.php';
-    $repo_path = '/home/ads/ecdb/repository/';
+    $repo_path = '/ecdb/repository/';
     $includes = '/var/www/html/ecdb/includes/';
 }
 else //if remote
