@@ -1,0 +1,1515 @@
+<!DOCTYPE HTML>
+<html lang='en' dir='ltr'>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="print.css" />
+<title>Print view - phpMyAdmin 4.0.10deb1</title>
+
+</head>
+<body>
+<h2>CZCN_inscr_graphs</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        surface_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(16)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        inscription_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(2)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        graph_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(2)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        graph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(15)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        code_point    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(7)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        punc    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(6)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        kuanshi    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(25)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        editorial    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(5)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        isCracknumber    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(5)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        isHewen    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(5)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+</div>
+    <div>
+<h2>arch_context_types</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Short name</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Concise description of type</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >name</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>name</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_contexts</h2>
+Table comments: Tombs, pits, house floors, layers, trenches, etc. <br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        arch_excavation_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>arch_excavations -&gt; id</td>
+    <td>Foreign key for arch_excavation.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        arch_period_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>arch_periods -&gt; id</td>
+    <td>Foreign key for arch_period.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Year date, or nearest decade, if available</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        arch_context_type_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>arch_context_types -&gt; id</td>
+    <td>Foreign key for arch_context_types</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Concise description</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>46</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >excavation+name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>arch_excavation_id</td><td>23</td><td>A</td><td>No</td><td  rowspan="2" >Prevent two contexts with the same name from the same excavation.</td></tr><tr class="noclick even"><td>name</td><td>46</td><td>A</td><td>No</td></tr><tr class="noclick odd"><td  rowspan="1" >arch_context_type_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>arch_context_type_id</td><td>2</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >arch_period_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>arch_period_id</td><td>2</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr><tr class="noclick odd"><td  rowspan="1" >arch_excavation_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>arch_excavation_id</td><td>23</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_excavations</h2>
+Table comments: A particular season of excavation at a particular locality<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        locality_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>arch_localities -&gt; id</td>
+    <td>Foreign key for arch_localities</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        year    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Year of excavation</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        insititution    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Name of the primary insitution that carried out the work</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>E.g. 村中89</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Short description of work carried out.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>9</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >locality_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>locality_id</td><td>9</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_localities</h2>
+Table comments: Localized clusters of culturally related features<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        site_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>arch_sites -&gt; id</td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Shortest English name</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name_zh    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Shortest Chinese name</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        latitude    </td>
+    <td class="nowrap" lang="en" dir="ltr">double</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Decimal degrees via Google Earth</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        longitude    </td>
+    <td class="nowrap" lang="en" dir="ltr">double</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>Decimal degrees via Google Earth</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Concise description</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>6</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >unique site+name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>site_id</td><td>2</td><td>A</td><td>Yes</td><td  rowspan="2" ></td></tr><tr class="noclick even"><td>name</td><td>2</td><td>A</td><td>Yes</td></tr><tr class="noclick odd"><td  rowspan="2" >uniqe site+name_zh</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>site_id</td><td>2</td><td>A</td><td>Yes</td><td  rowspan="2" ></td></tr><tr class="noclick odd"><td>name_zh</td><td>6</td><td>A</td><td>Yes</td></tr><tr class="noclick even"><td  rowspan="1" >site_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>site_id</td><td>2</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_objects</h2>
+Table comments: Objects as excavated, prior to joins, etc.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        context_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>arch_contexts -&gt; id</td>
+    <td>Foreign key for arch_contexts</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Usually a serial numbering within the context.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        inscr_object_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscr_objects -&gt; id</td>
+    <td>Foeign key for inscribed_objects.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>453</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >context+name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>context_id</td><td>113</td><td>A</td><td>No</td><td  rowspan="2" >Prevent two objects with the same name in the same context</td></tr><tr class="noclick even"><td>name</td><td>453</td><td>A</td><td>No</td></tr><tr class="noclick odd"><td  rowspan="1" >inscr_object_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>inscr_object_id</td><td>453</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_periods</h2>
+Table comments: Dynasties, reigns, archeological periods, etc.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Short name</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_start    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>BC as -ve, 1 BC = 0</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_end    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>BC as -ve, 1 BC = 0</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >name</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>name</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>arch_sites</h2>
+Table comments: Sites correspond to social entities like cities, burial grounds, villages, etc. <br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>shortest English name</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name_zh    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Shortest Chinese name</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        address_zh    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>From province down, including administrative unit names</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        description    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>1</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>name</td><td>1</td><td>A</td><td>No</td><td  rowspan="2" ></td></tr><tr class="noclick even"><td>name_zh</td><td>1</td><td>A</td><td>No</td></tr></tbody></table></div>
+    <div>
+<h2>graphs</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        is_hewen    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>true (=1) if character is a hewen; false (=0) otherwise. We don't want hewen.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        exemplar    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(30)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>For new signs not in Gulin. Reference to a published item on which the character appears.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        ics3_glyph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(9)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>representation of the OBI character using the encoding of the ics3 font.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        ics4_glyph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(9)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>kaiti representaiton of the OBI character using the encoding of the the ics4 font.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        hd_glyph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(4)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        gulin    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(16)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>ref_gulin -&gt; number</td>
+    <td>corresponding number in the Gulin index (Yu Xingwu 于省吾 1999). Zero-padded, 4-digit.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Notes and comments</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>5689</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >gulin</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>gulin</td><td>5689</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscr_graphs</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        graph_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>graphs -&gt; id</td>
+    <td>Foreign key for graphs.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        inscr_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscrs -&gt; id</td>
+    <td>Foreign key for inscrs.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        number    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Ordinal number of graph in inscription.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        markup    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>See ECDB documentation.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        x1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(5)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        y1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(5)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        x2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(5)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        y2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        rotation    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        punc    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Bit flags for punctuation. See ECDB documentation.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        ling_value_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Foreign key for ling_value</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >inscription+number</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>inscr_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="2" ></td></tr><tr class="noclick even"><td>number</td><td>0</td><td>A</td><td>No</td></tr><tr class="noclick odd"><td  rowspan="1" >graph_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>graph_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >inscr_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>inscr_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick odd"><td  rowspan="1" >ling_value_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>ling_value_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >graph_id_2</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>graph_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscr_object_types</h2>
+Table comments: Types of objects bearing inscriptions.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>E.g. cattle scapula.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name_zh    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>E.g. 牛肩胛骨</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        material    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>E.g. bronze.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>3</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >name</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>name</td><td>3</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick odd"><td  rowspan="1" >name_zh</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>name_zh</td><td>3</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscr_objects</h2>
+Table comments: Inscribed objects in the maximal state of joining.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Best known short name, if any. E.g. Da Yu ding.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name_zh    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>E.g. 大盂鼎.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        object_type_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscr_object_types -&gt; id</td>
+    <td>Foreign key for object_types.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>872</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >object_type_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>object_type_id</td><td>6</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscr_surf_types</h2>
+Table comments: Kinds of surfaces that can take an inscription. Depends on the object type.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>recto vs. verso, dorsal vs. ventral, inner well of vessel, etc.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Definition of the surface type.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>2</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >type</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>type</td><td>2</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscr_surfs</h2>
+Table comments: Insribed surfaces as reproduced in publications. Published twice &gt; recors twice.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        inscr_object_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscr_objects -&gt; id</td>
+    <td>Foreign key for inscr_objects</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        surf_type_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscr_surf_types -&gt; id</td>
+    <td>Foreign ket for inscr_surf_types.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Concise desription where required.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        img_file    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Filename of jpg img. Path determined by publications table.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        pub_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>pubs -&gt; id</td>
+    <td>Foreign key for pubs.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Usually a serial number. Zero pad for sorting.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        x1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        x2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        y1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        y2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        rotation    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>574</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >object+name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>inscr_object_id</td><td>574</td><td>A</td><td>No</td><td  rowspan="2" ></td></tr><tr class="noclick even"><td>name</td><td>574</td><td>A</td><td>No</td></tr><tr class="noclick odd"><td  rowspan="2" >pub+name</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>pub_id</td><td>4</td><td>A</td><td>No</td><td  rowspan="2" ></td></tr><tr class="noclick odd"><td>name</td><td>574</td><td>A</td><td>No</td></tr><tr class="noclick even"><td  rowspan="1" >inscr_object_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>inscr_object_id</td><td>574</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick odd"><td  rowspan="1" >pub_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>pub_id</td><td>4</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >surf_type_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>surf_type_id</td><td>9</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>inscrs</h2>
+Table comments: OB often have many inscriptions per surface. Other object types usually one.<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        inscr_surf_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>inscr_surfs -&gt; id</td>
+    <td>Foreign key for inscr_surfs</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        number    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(3)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Serial numbering generally of the original publication.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        x1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        y1    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        x2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        y2    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        rotation    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Notes specifially on this inscription.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="2" >surf+number</td><td  rowspan="2" >BTREE</td><td  rowspan="2" >Yes</td><td  rowspan="2" >No</td><td>inscr_surf_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="2" ></td></tr><tr class="noclick even"><td>number</td><td>0</td><td>A</td><td>No</td></tr><tr class="noclick odd"><td  rowspan="1" >inscr_surf_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >No</td><td  rowspan="1" >No</td><td>inscr_surf_id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>pubs</h2>
+Table comments: Publications of text surfaces<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Short English abbreviated name, used to refer uniquely (case insensitive) to publication</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Date of first publication</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        full_name    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Title of publication in Roman and vernacular</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        zh_short_name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Chinese abbreviated name as used in scholarly publications. Alternatives separated by slashes &quot;/&quot;.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        zh_bibliography    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Chinese bibliographic inofrmation by GeLiang (jiagu_zhulu_zongbiao.tar.gz)</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        bibliography    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>HTML English bibliographic information (from Zotero)</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        jicheng    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(4)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Volume (if any) of Jiagu wenxian jicheng in which this is reprinted</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        notes    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Notes under the headings: CONTENT, NUMBERING, NOTES</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        object_type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>obi, bi, jianbo, etc.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>39</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >pubName</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>name</td><td>13</td><td>A</td><td>Yes</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ref_chant</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        graph_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(4)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>graphs -&gt; id</td>
+    <td>Foreign key for graphs table.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        chant_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(4)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>?? Continuous numbering. Order = chantNumber + variantSuffix ??</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        is_hewen    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>true (=1) if character is a hewen; false (=0) otherwise.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        exemplar_source    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(30)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>For new signs not in Gulin. Reference to a published item on which the character appears.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        chant_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>zero-padded, 4-digit serial number. Characters that are variants have the same chantNumber, but are disambiguated by variantSuffix.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        chant_var    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(1)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>value is NULL unless there are multiple rows with the same chantNumber, in which case the first row will be NULL, and subsequent rows A, B, C, etc.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        bushou_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(9)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>zero-padded three-digit number referencing the chantBushou table..</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        bushou_ics3    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(4)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>redundant</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        ics3_glyph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(9)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>representation of the OBI character using the encoding of the ics3 font.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        ics4_glyph    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(9)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>kaiti representaiton of the OBI character using the encoding of the the ics4 font.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        gulin    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(16)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>corresponding number in the Gulin index (Yu Xingwu 于省吾 1999). Zero-padded, 4-digit.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>graph_id</td><td>5718</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >chant_id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>chant_id</td><td>5718</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ref_gulin</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        number    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(4)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>Zero-padded 4-digit gulin number.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        page    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(4)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>Page number in print edition.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        page_interpolated    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>1 if calculated by linear interpolation. 0 if data point.</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>number</td><td>3691</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ref_shen2008</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Links to</th>
+    <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        graph_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(4)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>graphs -&gt; id</td>
+    <td>Foreign key for graphs table..</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        is_hewen    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>true (=1) if character is a hewen; false (=0) otherwise.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        exemplar_source    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(30)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>For new signs not in Gulin. Reference to a published item on which the character appears.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        shen2008_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>zero-padded, 4 digit. Candidate value calculated using offset + chantNumber.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        shen2008_var    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>NULL, A, B, C, etc.</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        gulin_number    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(16)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td></td>
+    <td>corresponding number in the Gulin index (Yu Xingwu 于省吾 1999). Zero-padded, 4-digit.</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        page_image    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(30)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td>Filename of jpg in repository/sign_list_imgs/sc/</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>graph_id</td><td>6033</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+</body>
+</html>
