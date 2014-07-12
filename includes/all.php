@@ -18,7 +18,7 @@ if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
 else //if remote
 {
     $config_path = '/home1/adamsmit/mysql.php';
-    $repo_path = '/home1/adamsmit/public_html/ecdb/repository/';
+    $repo_path = '/ecdb/repository/';
     $includes = '/home1/adamsmit/public_html/ecdb/includes/';
 }
 ?>
