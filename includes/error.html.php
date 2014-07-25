@@ -8,7 +8,7 @@
 
 <p>
 <?php 
-echo "$output"; 
+echo "OOPS! : $output"; 
 ?>
 </p>
 

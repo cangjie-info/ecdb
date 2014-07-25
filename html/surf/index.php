@@ -3,11 +3,18 @@
 require '../../includes/all.php';
 require $includes . 'db_connect.php';
 
+if (!isset($_GET['id']))
+{
+    $output = 'Integer id must be present in url.';
+    include $includes . 'error.html.php';
+    exit();
+}
+
 $id = $_GET['id'];
 //validate as integer
 if (!is_numeric($id))
 {
-    $output = "Id must be numeric.";
+    $output = 'Id must be numeric.';
     include $includes . 'error.html.php';
     exit();
 }
