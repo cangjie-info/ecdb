@@ -6,8 +6,10 @@
 </head>
 <body>
 
-<h1>ECDB - surfaces</h1>
-<h2>Surface = <?php echo "$surf" ?></h2>
+<?php require $includes . 'top.html.php'; ?>
+
+<h1>Surfaces</h1>
+<h2><?php echo "$surf" ?></h2>
 
 <?php
 $inscr_current = 0;

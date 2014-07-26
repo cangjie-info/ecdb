@@ -5,7 +5,10 @@
     <title>ECDB - Database documentation</title>
 </head>
 <body>
-<h1>ECDB - Database documentation</h1>
+
+<?php require $includes . 'public_top.html.php'; ?>
+
+<h1>Database documentation</h1>
 <p>The ECDB MySQL database is designed to store, view and manipulate information about archeologically recovered texts in difficult orthographies. 
 To some extent, the database is self-documenting, using the table and field comments in MySQL. 
 The relational <a href = 'schema.pdf'>schema</a> and a data <a href='datadict.html'>dictionary</a> will be generated periodically with phpMyAdmin.

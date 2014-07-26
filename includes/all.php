@@ -11,12 +11,14 @@ ini_set( 'display_errors','1');
 //and set paths accordingly
 if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
 {
+    $home_path = '/ecdb';
     $config_path = '/var/www/html/mysql.php';
     $repo_path = '/ecdb/repository/';
     $includes = '/var/www/html/ecdb/includes/';
 }
 else //if remote
 {
+    $home_path = '/ecdb';
     $config_path = '/home1/adamsmit/mysql.php';
     $repo_path = '/ecdb/repository/';
     $includes = '/home1/adamsmit/public_html/ecdb/includes/';
