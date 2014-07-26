@@ -1,5 +1,7 @@
 <?php
 
+$page_name = 'Surfaces';
+
 require '../../includes/all.php';
 require $includes . 'db_connect.php';
 
@@ -20,17 +22,19 @@ if (!is_numeric($id))
 }
 
 $query = 'SELECT inscr_surfs.name as surf, 
-            inscrs.number as inscr, 
-            ics3_glyph as ics3
-FROM inscr_surfs
-INNER join inscrs
-ON inscr_surf_id=inscr_surfs.id
-INNER JOIN inscr_graphs
-ON inscr_id=inscrs.id
-INNER JOIN graphs
-ON graph_id=graphs.id ' .
-"WHERE inscr_surfs.id=$id " .
-'ORDER BY inscr, inscr_graphs.number;';
+                inscrs.number as inscr, 
+                ics3_glyph as ics3
+            FROM inscr_surfs
+            INNER join inscrs
+            ON inscr_surf_id=inscr_surfs.id
+            INNER JOIN inscr_graphs
+            ON inscr_id=inscrs.id
+            INNER JOIN graphs
+            ON graph_id=graphs.id ' .
+
+           "WHERE inscr_surfs.id=$id " .
+           
+           'ORDER BY inscr, inscr_graphs.number;';
 
 $result = mysqli_query($link, $query);
 if (!$result)

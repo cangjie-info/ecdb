@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset='UTF-8' />
-<title>ECDB - surfaces</title>
-</head>
-<body>
-
 <?php require $includes . 'top.html.php'; ?>
 
-<h1>Surfaces</h1>
+<h1><?php echo $page_name; ?></h1>
 <h2><?php echo "$surf" ?></h2>
 
 <?php

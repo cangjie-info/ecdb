@@ -1,5 +1,8 @@
 <?php
-$page_name = 'Home';
+
 require '../includes/all.php';
+require $includes . 'db_connect.php';
+
 include 'home.html.php';
+
 ?>
