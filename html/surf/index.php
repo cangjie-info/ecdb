@@ -21,7 +21,8 @@ if (!is_numeric($id))
     exit();
 }
 
-$query = 'SELECT inscr_surfs.name as surf, 
+$query = 'SELECT graphs.id AS graph,
+                inscr_surfs.name as surf, 
                 inscrs.number as inscr, 
                 ics3_glyph as ics3
             FROM inscr_surfs
@@ -48,11 +49,13 @@ $row = mysqli_fetch_array($result);
 $surf = $row['surf'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
+$graph[] = $row['graph'];
 
 while ($row = mysqli_fetch_array($result))
 {
     $inscr[] = $row['inscr'];
     $ics3[] = $row['ics3'];
+    $graph[] = $row['graph'];
 }
 
 require 'surf.html.php';

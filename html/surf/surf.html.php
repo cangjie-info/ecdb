@@ -19,7 +19,10 @@ for ($i=0; $i<sizeof($ics3); $i++):
 ?>
 
 <!--Markup for individual graph-->
-<span style="font-family:ics3;"><?php echo "$ics3[$i]"; ?></span>
+<span style="font-family:ics3;">
+<a href='../graph/?id=<?php echo $graph[$i]; ?>'>
+<?php echo $ics3[$i]; ?></a></span>
+
 
 <?php //if last graph in surf or inscr
     if ($i + 1 == sizeof($ics3) or $inscr_current != $inscr[$i + 1]):
