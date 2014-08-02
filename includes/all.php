@@ -9,12 +9,19 @@ ini_set( 'display_errors','1');
 
 //code to guess whether we are remote or local
 //and set paths accordingly
-if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local
+if($_SERVER['DOCUMENT_ROOT']=='/var/www/html') //if local linux
 {
     $home_path = '/ecdb';
     $config_path = '/var/www/html/mysql.php';
     $repo_path = '/ecdb/repository/';
     $includes = '/var/www/html/ecdb/includes/';
+}
+else if ($_SERVER['DOCUMENT_ROOT']=='C:/wamp/www/') //if local windows
+{
+	$home_path = '/ecdb';
+	$config_path = '/wamp/www/mysql.php';
+	$repo_path = '/ecdb/repository/';
+	$includes = '/wamp/www/ecdb/includes/';
 }
 else //if remote
 {
