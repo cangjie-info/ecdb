@@ -16,7 +16,7 @@ for ($i=0; $i<count($id); $i++)
 {
     $cum_pc = round($cum[$i] / $running_total * 100, 2);  
     echo '<tr>';
-    echo "<td><span style='font-family:ics3'>$ics3[$i]</span></td>";
+    echo "<td><span style='font-family:ics3'><a href='../graph/?id=$id[$i]'>$ics3[$i]</a></span></td>";
     echo "<td>$count[$i]</td>";
     echo "<td>$i</td>";
     echo "<td>$cum_pc</td>";
