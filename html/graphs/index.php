@@ -20,6 +20,8 @@ $graph_count = $row['count'];
 
 $query = 'SELECT graphs.id AS id, 
             ics3_glyph AS ics3, 
+            matt_glyph,
+            matt_cp,
             count( inscr_graphs.graph_id ) AS count
         FROM graphs
         LEFT JOIN inscr_graphs 
@@ -41,6 +43,8 @@ while ($row = mysqli_fetch_array($result))
 {
     $id[] = $row['id'];
     $ics3[] = $row['ics3'];
+    $matt_glyph[] = $row['matt_glyph'];
+    $matt_cp[] = $row['matt_cp'];
     $count[] = $row['count'];
     $running_total += $row['count'];
     $cum[]  = $running_total;

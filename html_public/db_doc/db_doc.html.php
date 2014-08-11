@@ -27,7 +27,7 @@ This allows them to be conveniently displayed together by sorting on the table n
 <li><code>arch_localities</code></li>
 <li><code>arch_objects</code></li>
 <li><code>arch_periods</code></li>
-<li><code>arch_sites</code></li>
+<li><code><a href='#arch_sites'>arch_sites</a></code></li>
 </ul>
 <h3>The <code>graphs</code> group</h3>
 <p>Tables in this group include a list of all graphs available for encoding texts, and others containing palaeographical information on those graphs. 
@@ -66,9 +66,21 @@ The publications in which published inscribed surfaces are found are listed in <
 <h3>arch_contexts</h3>
 <h3>arch_excavations</h3>
 <h3>arch_localities</h3>
+
 <h3>arch_objects</h3>
 <h3>arch_periods</h3>
-<h3>arch_sites</h3>
+<h3><a id='arch_sites'>arch_sites</a></h3>
+<p>Archeological sites: groups of spatially proximate, temporally continuous and culturally related archeological remains. ECDB allows for 'localities' and 'features' below the level of the 'site', so in general we want the 'site' to as large an archeological unit as possible. E.g. Shang dynasty "Anyang Yinxu" is a site. E.g. Han period remains from Anyang are not considered to belong to the same site.</p>
+<h4>Fields</h4>
+<h5>id</h5>
+<h5>name</h5>
+<p>Unique, alphabetic (usually pinyin) name. This will usually be the transliteration of the Chinese name (name_zh field), which by convention is the modern name of the closest inhabited location. In order to maintain uniquness, adding higher levels in the geographic name may be necessary. For major historically prominent sites, using an historical name is also appropriate.</p>
+<h5>name_zh</h5>
+<p>Name as it appears in the Chinese scholarly literature. Chinese characters. Must be unique.</p>
+<h5>address</h5>
+<p>Full 'address' string of the site, in Chinese, beginning with province, and with all administrative unit names specified. E.g. 河南省安陽市.
+<h5>description</h5>
+<p>Short prose description of the site and its significance, focussing on its textual remains and their background. Not the place for long essays.</p>
 
 <h3><a id='graphs'>graphs</a></h3>
 <p>This table is a list of all graphs available for encoding texts. Currenly it holds a very complete representation of the Anyang OBI inventory of graphs, based on the list found in Shen & Cao (2008). 
