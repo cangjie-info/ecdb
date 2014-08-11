@@ -3,11 +3,20 @@
 <h1><?php echo $page_name; ?></h1>
 
 <?php 
-foreach($sites as $site)
+foreach($sites as $id => $site)
 {
     echo '<h2>' . $site['name'] . ' ' . $site['name_zh'] . '</h2>';
     echo '<p>' . $site['address'] . '</p>';
     echo '<p>' . $site['desc'] . '</p>';
+    echo '<ul>';
+    foreach($sites[$id]['localities'] as $locality)
+    {
+        echo '<li><p><a href="../localities/?' . $locality['id'] . '">' 
+            . $locality['name'] . '</a> ' 
+            . $locality['name_zh'] . ' ' 
+            . $locality['desc'] . '</p></li>';
+    }
+    echo '</ul>';
 }
 ?>
 </body>
