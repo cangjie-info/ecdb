@@ -1,8 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
 
-<h1><?php echo $page_name; ?></h1>
-<h2><?php echo "$surf" ?></h2>
-
 <?php
 $inscr_current = 0;
 $inscr_graph_current = 0;

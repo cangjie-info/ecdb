@@ -1,7 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
 
-<h1><?php echo $page_name; ?></h1>
-
 <p>ICS3 glyph = <span style='font-family:ics3'>
 <?php echo $ics3; ?>
 </span></p>

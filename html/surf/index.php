@@ -1,6 +1,6 @@
 <?php
 
-$page_name = 'Surfaces';
+$page_name = 'Surface';
 
 require '../../includes/all.php';
 require $includes . 'db_connect.php';
@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_array($result))
     $ics3[] = $row['ics3'];
     $graph[] = $row['graph'];
 }
-
+$page_name .= ": $surf";
 require 'surf.html.php';
 
 ?>

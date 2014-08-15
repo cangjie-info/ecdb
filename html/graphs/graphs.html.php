@@ -1,6 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
 
-<h1><?php echo $page_name; ?></h1>
 <p>This is a list of all graphs currently in the ECDB sign-list. Some are not used in the current transcriptions (count = 0).</p>
 <p>Graphs in sign-list = <?php echo $graph_count; ?></p>
 <p>Graphs in inscriptions = <?php echo $running_total; ?></p>

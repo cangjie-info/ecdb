@@ -1,7 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
 
-<h1><?php echo $page_name; ?></h1>
-
 <?php 
 foreach($sites as $id => $site)
 {
@@ -11,7 +9,7 @@ foreach($sites as $id => $site)
     echo '<ul>';
     foreach($sites[$id]['localities'] as $locality)
     {
-        echo '<li><p><a href="../localities/?' . $locality['id'] . '">' 
+        echo '<li><p><a href="../localities/?id=' . $locality['id'] . '">' 
             . $locality['name'] . '</a> ' 
             . $locality['name_zh'] . ' ' 
             . $locality['desc'] . '</p></li>';

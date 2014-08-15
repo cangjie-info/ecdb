@@ -1,7 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
 
-<h1><?php echo $page_name; ?></h1>
-
 <?php
 $current_inscr = 0;
 $i=0;
