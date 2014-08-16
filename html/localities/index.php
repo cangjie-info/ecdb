@@ -49,7 +49,6 @@ while ($row = mysqli_fetch_array($result))
 foreach($data as $datum) // each row is a context, but get years, discarding duplicates
 {
     $excavations[$datum['id']] = array(
-        'locality' => $datum['name'] . ' ' . $datum['name_zh'],
         'year' => $datum['year'],
         'contexts' => array());
 }
@@ -59,7 +58,7 @@ foreach($data as $datum) //second pass for the contexts
         'id' => $datum['context_id'],
         'name' => $datum['context'] );
 }
-$page_name .= ': ' . reset($excavations)['locality']; 
+$page_name .= ': ' . $data[0]['name'] . ' ' . $data[0]['name_zh'];
 require 'localities.html.php';
 
 ?>
