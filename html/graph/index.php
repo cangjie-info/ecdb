@@ -26,10 +26,14 @@ $query = 'SELECT graphs.id AS id,
             ics4_glyph AS ics4,
             hd_glyph AS hd,
             gulin AS gulin,
-            count(inscr_graphs.graph_id) AS count
+            count(inscr_graphs.graph_id) AS count,
+            CONCAT(shen2008_number, shen2008_var) AS shen2008,
+            page_image
           FROM graphs
+          INNER JOIN ref_shen2008 
+            ON graphs.id = ref_shen2008.graph_id
           LEFT JOIN inscr_graphs
-          ON graphs.id = inscr_graphs.graph_id ' .
+            ON graphs.id = inscr_graphs.graph_id ' .
           "WHERE graphs.id = $id " .
           'GROUP BY graphs.id;' ; 
 
@@ -47,7 +51,9 @@ $ics4 = $row['ics4'];
 $hd = $row['hd'];
 $gulin = $row['gulin'];
 $count = $row['count'];
-
+$shen2008 = $row['shen2008'];
+$page_file = $row['page_image'];
+$img_path = $repo_path . 'sign_list_imgs/sc/' . $page_file;
 //include page with html
 require 'graph.html.php';
 
