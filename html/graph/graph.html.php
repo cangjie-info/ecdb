@@ -12,7 +12,8 @@
 <?php echo $hd; ?>
 </span></p>
 
-<p><i>Gulin</i> = <?php echo $gulin; ?></p>
+<p><i>Gulin</i> = <a href = '../gulin/?gulin=<?php echo $gulin; ?>'>
+    <?php echo $gulin; ?></a></p>
 <p>Shen &amp; Cao (2008) = <?php echo '<a href = "' . $img_path . '">' . "$shen2008</a>";?></p>
 
 <p>count (all inscriptions) =
