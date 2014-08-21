@@ -23,9 +23,9 @@ if (!preg_match($regex, $gulin))
 
 $page_name .= " $gulin";
 
-if(isset($_POST['interpolate']))
+if(isset($_POST['interpolate'])) //button was clicked on this page
 {
-    $page_name = "interpolation";
+    include 'interpolation.php';
 }
 
 $query = 'SELECT number, page, page_interpolated
