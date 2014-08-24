@@ -54,7 +54,7 @@ $surf = $row['pub'] . $row['surf'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
 $graph[] = $row['graph'];
-$zot_data = getZot('keys', $row['zotero']);
+$zot_data = getZot('keys', array($row['zotero']));
 
 while ($row = mysqli_fetch_array($result))
 {
