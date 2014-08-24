@@ -22,16 +22,20 @@ if (!is_numeric($id))
 }
 
 $query = 'SELECT graphs.id AS graph,
-                inscr_surfs.name as surf, 
-                inscrs.number as inscr, 
-                ics3_glyph as ics3
+                inscr_surfs.name AS surf, 
+                inscrs.number AS inscr, 
+                ics3_glyph AS ics3,
+                pubs.name AS pub,
+                pubs.zotero AS zotero
             FROM inscr_surfs
             INNER join inscrs
             ON inscr_surf_id=inscr_surfs.id
             INNER JOIN inscr_graphs
             ON inscr_id=inscrs.id
             INNER JOIN graphs
-            ON graph_id=graphs.id ' .
+            ON graph_id=graphs.id 
+            INNER JOIN pubs
+            ON pubs.id = pub_id ' .
 
            "WHERE inscr_surfs.id=$id " .
            
@@ -46,10 +50,11 @@ if (!$result)
 }
 
 $row = mysqli_fetch_array($result);
-$surf = $row['surf'];
+$surf = $row['pub'] . $row['surf'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
 $graph[] = $row['graph'];
+$zot_data = getZot('keys', $row['zotero']);
 
 while ($row = mysqli_fetch_array($result))
 {

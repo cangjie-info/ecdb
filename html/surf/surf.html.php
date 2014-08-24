@@ -32,5 +32,6 @@ for ($i=0; $i<sizeof($ics3); $i++):
     endif;
     endfor;
 ?>
+<?php echo $zot_data; ?>
 </body>
 </html>
