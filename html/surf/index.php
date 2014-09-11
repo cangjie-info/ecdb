@@ -50,7 +50,7 @@ if (!$result)
 }
 
 $row = mysqli_fetch_array($result);
-$surf = $row['pub'] . $row['surf'];
+$surf = $row['pub'] .':' . $row['surf'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
 $graph[] = $row['graph'];
