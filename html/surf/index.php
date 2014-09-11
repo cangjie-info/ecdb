@@ -26,7 +26,8 @@ $query = 'SELECT graphs.id AS graph,
                 inscrs.number AS inscr, 
                 ics3_glyph AS ics3,
                 pubs.name AS pub,
-                pubs.zotero AS zotero
+                pubs.zotero AS zotero,
+                img_file
             FROM inscr_surfs
             INNER join inscrs
             ON inscr_surf_id=inscr_surfs.id
@@ -51,6 +52,7 @@ if (!$result)
 
 $row = mysqli_fetch_array($result);
 $surf = $row['pub'] .':' . $row['surf'];
+$img_url = $row['img_file'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
 $graph[] = $row['graph'];

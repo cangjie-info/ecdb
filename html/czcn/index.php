@@ -11,7 +11,8 @@ $query = 'select inscr_surfs.name AS name,
     inscr_graphs.punc AS punc,
     graphs.ics3_glyph AS ics3,
     matt_glyph,
-    matt_cp
+    matt_cp,
+    img_file
 from inscr_surfs
 inner join inscrs on inscr_surfs.id = inscr_surf_id
 inner join inscr_graphs on inscr_id = inscrs.id
@@ -35,6 +36,7 @@ while ($row = mysqli_fetch_array($result))
 foreach($data as $datum) //first pass to get surface names
 {
     $surfaces[$datum['name']] = array();
+    $img_url[$datum['name']] = $datum['img_file'];
 }
 
 foreach($data as $datum) //second pass to get inscriptions

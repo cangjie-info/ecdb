@@ -1,6 +1,9 @@
 <?php require $includes . 'top.html.php'; ?>
 
 <?php
+
+echo "<p><a href='$repo_path$img_url'>Image</a></p>";
+
 $inscr_current = 0;
 $inscr_graph_current = 0;
 for ($i=0; $i<sizeof($ics3); $i++):
