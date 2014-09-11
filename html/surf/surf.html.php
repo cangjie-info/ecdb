@@ -1,8 +1,8 @@
 <?php require $includes . 'top.html.php'; ?>
 
 <?php
-
-echo "<p><a href='$repo_path$img_url'>Image</a></p>";
+$img_path=$repo_path . 'text_imgs/';
+echo "<p><a href='$img_path$img_url'>Image</a></p>";
 
 $inscr_current = 0;
 $inscr_graph_current = 0;

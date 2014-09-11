@@ -3,7 +3,8 @@
 <?php 
 foreach ($surfaces as $name => $surface)
 {
-    $img_link = "<a href='$repo_path$img_url[$name]'>$name</a>";
+    $img_path = $repo_path . 'text_imgs/';
+    $img_link = "<a href='$img_path$img_url[$name]'>$name</a>";
     echo '<h2>CZCN ' . $img_link . '</h2>';
     foreach ($surface as $number => $inscription)
     {
