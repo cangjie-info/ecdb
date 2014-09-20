@@ -52,7 +52,7 @@ if (!$result)
 
 $row = mysqli_fetch_array($result);
 $surf = $row['pub'] .':' . $row['surf'];
-$img_url = $row['img_file'];
+$img_url = strtolower($row['pub']) . '/' . $row['img_file'];
 $inscr[] = $row['inscr'];
 $ics3[] = $row['ics3'];
 $graph[] = $row['graph'];

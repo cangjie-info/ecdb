@@ -4,20 +4,32 @@
 <ul>
 <li>Mergers etc.
     <ul>
-        <li>子, 巳 etc.</li>
-        <li> 丁</li>
-        <li>亥</li>
-        <li>受</li>
-        <li>酉</li>
         <li>以</li>
-        <li>惠</li>
         <li>翌日</li>
-        <li>"coffin"</li>
+        <li>月 and 夕 - this is a confusing issue, and the solution adopted should be documented.</li>
+        <li>the 羌 group - again, complex. Needs careful thought.</li>
     </ul>
 <li>ref_ics3 table - a reference list of all ICS3 graphs and their CHANT bushou, plus web page.</li>
-<li>ling_values table - a table of linguistic values (morphemes, in principle)that graphs write.</li>
-<li>name field in graph table - typable mnemonic names for graphs.</li>
-<li>CHANT hewen</li>
+<li>glyphs for new graphs</li>
+<li>name, cjk_strict and cjk_fudge fields in graphs table need to be extensively populated.</li>
+<li>grapheme/ling_val categories - livestock animals, body parts, numerals, ganzhi, sacrifical verbs, etc.</li>
+<li>imgs and page numbers for hj, uk, tn, etc.</li>
+<li>review and improve all existing pages.</li>
+<li>search by collection and surface number</li>
+<li>concordance by prior and previous graph</li>
+<li>Add live-editable prose analyses for graphs and ling_vals</li>
+<li>List all ics3 glyphs associated with a particular graph. (also Shen &amp; Cao numbers).</li>
+<li>"Other projects" page or selected list of links.</li>
+<li>Data sources page</li>
+<li>Merge HD signs into graphs table</li>
+<li>hook up viewer client to edit the main db</li>
+<li>populate unambiguous graph instances with linguistic values - numerals, most ganzhi, 貞 etc.</li>
+<li>break up CHANT hewen - this is complex - do as transaction with rollback on failure.</li>
+<li>Fonts page.</p>
+<li>Joins and duplicates infrastructure</li>
+<li>ECDB php API - swap graph etc., insert graph, global replace.</li>
+<li>Baxter and Sagart linguistic values list</li>
+<li>Glossary of terms table and page.</li>
 <li></li>
 </ul>
 <h3>Longer term</h3>
