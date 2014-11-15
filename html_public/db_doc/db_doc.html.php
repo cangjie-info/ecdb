@@ -142,8 +142,9 @@ This is hardly a human-readable format but it is compact and easily handled by c
 <h5>punc</h5>
 <p>Punctuation represented by this field is <em>editorial</em> punctuation. It does not refer to marks or signs appearing in the original inscription. 
 They would be encoded as graphs inline with the text, not as markup.</p>
-<p>Punctuation comes in two flavors: pre-punctuation is punctuation that is inserted <em>before</em> the graph it is associated with in the stream of text. Post-punctuation refers to punctuation that is inserted <em>after</em> the graph with which it is associated. ECDB permits the following punctuation (pre-punctuation is the first two items in the list; the remainder are post-puntuation).</p>
+<p>Punctuation comes in two flavors: pre-punctuation is punctuation that is inserted <em>before</em> the graph it is associated with in the stream of text. Post-punctuation refers to punctuation that is inserted <em>after</em> the graph with which it is associated. ECDB permits the following punctuation (pre-punctuation is the first three items in the list and the final two; the remainder are post-puntuation). Anything like a paragraph-break should (probably?) be treated as a section division.</p>
 <p>
+
 <code>LEFTQUOTE = 1 “</code><br/>
 <code>LEFTINNERQUOTE = 2 ‘</code><br/>
 <code>LEFTTITLE = 4 《</code><br/>
@@ -156,9 +157,12 @@ They would be encoded as graphs inline with the text, not as markup.</p>
 <code>COLON = 512 ：</code><br/>
 <code>RIGHTINNNERQUOTE = 1024 ’</code><br/>
 <code>RIGHTQUOTE = 2048 ”</code><br/>
+<code>TAB = 4096 (indent, for verse sections, etc. - prepunc)</code><br/>
+<code>NEWLINE = 8192 (start new line, for verse sections, paragraphs in long prose passages or speeches, etc. - prepunc)</code><br/>
+<p><code>PERIOD, QUESTION, EXCLAMATION,</code> and <code>COLON</code> will be used to mark sentence endings during editing. Sentences are nevertheless modelled independently of punctuation.<br/>
 </p>
 <p>Only one of each punctuation item is permitted under this arrangment. Quotes can be nested, but only to a depth of two. 
-Items always display in the order in which they appear in this list. E.g. a PERIOD always comes after a RIGHTTITLE but before a RIGHTQUOTE.<p>
+Items always display in the order in which they appear in this list, except for the last two items: <code>NEWLINE</code> displays before all others, followed by </code>TAB</code>. E.g. a PERIOD always comes after a RIGHTTITLE but before a RIGHTQUOTE.<p>
 <h5>ling_value_id</h5>
 <p>The lingistic value of (morpheme written by) the graph.</p>
 
