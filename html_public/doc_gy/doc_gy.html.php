@@ -27,6 +27,18 @@ The typable transcription/reconstruction of Baxter (1992) will be used to repres
 Freely available for download from <a href = 'https://github.com/cjkvi/cjkvi-dict'>github</a>. Further documentation and other data here: <a href='http://kanji-database.sourceforge.net/'>http://kanji-database.sourceforge.net/</a>. 
 The rhymedict project states that their GY gloss text came from this project, although their fanqie, headwords, etc. came from other sources. Data downloaded Fri 13 Feb 2015 10:05:52 PM EST, and in the ECDB data archive. To convert the xml data into a csv format suitable for import to MySQL, use something like the Python <a href='https://docs.python.org/2/library/xml.etree.elementtree.html'>ElementTree XML API</a>. 
 Since the GY headwords and fanqie are indepdendent of the ryhmedict project's data, it would be good to run them against one another in comparison. The text of the prefaces would also be useful as part of a static page on the GY.</p>
+
+<h3>Digitized GY editions</h3>
+<p>I am aware of the following digitized GYs:</p>
+<ul>
+<li>Waseda U. Library
+<ul><li><a href='http://www.wul.waseda.ac.jp/kotenseki/html/ho04/ho04_01757/index.html'>1704 澤存堂 edition</a>.</li>
+<li></li><a href='http://www.wul.waseda.ac.jp/kotenseki/html/ho04/ho04_00038/index.html'>1667 符山堂 edition</a>.</li>
+</ul><li>
+<li>Tokyo U., 東洋文化研究所
+<ul><li><a href='http://shanben.ioc.u-tokyo.ac.jp/main_p.php?nu=148400&order=rn_no&no=00081'>1704 澤存堂 edition</a>.</li>
+</ul></ul>
+
 <h2>Work done</h3>
 <p>All files transferred to MySQL, and appropriately renamed.<p>
 
