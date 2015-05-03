@@ -2,6 +2,7 @@
 <h2>Planned changes to the ECDB data or web interface.</h2>
 <h3>Short term</h3>
 <ul>
+<li>Complete HD data entry.</li>
 <li>Mergers etc.
     <ul>
         <li>以</li>
