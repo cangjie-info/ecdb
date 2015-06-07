@@ -8,10 +8,10 @@
 <p>On entering the pw, this will save an sql text file of the entire database to the current directory.</p>
 
 <h2>Backup remote db with mysqldump</h2>
-<pre>ssh www.cangjie.info -l &lt;USER&gt;</pre>
+<code>ssh www.cangjie.info -l &lt;USER&gt;</code>
 <p>Navigate to backup directory.</p>
-<pre>mysqldump -u &lt;USER&gt; -p &lt;DBNAME&gt; &gt; ecdb.sql.yyyy.mm.dd
-zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</pre>
+<code>mysqldump -u &lt;USER&gt; -p &lt;DBNAME&gt; &gt; ecdb.sql.yyyy.mm.dd
+zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</code>
 
 <h2>Restore local db from sql text file</h2>
 <ol>
@@ -27,18 +27,18 @@ zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</pre>
 </ol>
  
 <h2>Restore remote (Hostgator) db from sql text file</h2>
-<pre>scp &lt;PATH&gt;/ecdb.sql.yyyy-mm-dd &lt;USER&gt;@www.cangjie.info:~/tmp/ecdb.sql
+<code>scp &lt;PATH&gt;/ecdb.sql.yyyy-mm-dd &lt;USER&gt;@www.cangjie.info:~/tmp/ecdb.sql
 ssh www.cangjie.info -l &lt;USER&gt;
 mysql -h localhost -u &lt;DBUSER&gt; -p
 drop database &lt;DBNAME&gt;;
-create database &lt;DBNAME&gt;;</pre>
+create database &lt;DBNAME&gt;;</code>
 <p>Exit mysql client.</p>
-<pre>mysql -h localhost -u &lt;USERNAME&gt; -p &lt;DBNAME&gt; &lt; ~/tmp/ecdb.sql
-</pre>
+<code>mysql -h localhost -u &lt;USERNAME&gt; -p &lt;DBNAME&gt; &lt; ~/tmp/ecdb.sql
+</code>
 
 <h2>Get Zotero item key from Firefox</h2>
 <p>To read an item via the Zotero API, you need to have the item key. Oddly, the Zotero Firefox app does not provide simple access to the item keys. The following export translator will copy the item keys as a comma-separated list to the clipboard on Ctrl+Shift+c in the usual manner. The translator needs to be saved as a javascript file (<code>.js</code> file extension) in the Zotero <code>translators</code> directory.</p>
-<pre>{
+<code>{
 "translatorID":"0dbe4ec8-597c-4cc7-bfb5-c38321c5c689",
 "translatorType":2,
 "label":"Zotero Item Key",
@@ -57,7 +57,7 @@ function doExport() {
 	while(item = Zotero.nextItem()) {
     Zotero.write(item.key);
 	}
-}</pre>
+}</code>
 
 <h2>Insert COinS data into a web-page</h2>
 <ol><li>Set Zotero Quick Copy default output format to "COinS".</li>
@@ -83,12 +83,12 @@ function doExport() {
         <li>Tag example: to return a bibliography of all items with a particular tag use tag=<tagname> in the query string. E.g. <code>https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI</code>. Result is <a href="https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI">here</a>. For more complocated tag queries, see the <a href="https://www.zotero.org/support/dev/web_api/v2/read_requests">Documentation</a>.</li>
         <li>COinS: By changing the <code>format=bib</code> to <code>format=coins</code>, a set of <code>&lt;span&gt;</code>s containing COinS data is returned instead. <code>https://api.zotero.org/users/160881/items/?v=3&format=coins&tag=OBI</code>.</li> 
     </ul>
-    <li>Adding the bibliograpic data to a php/html webpage is simple:<pre>
+    <li>Adding the bibliograpic data to a php/html webpage is simple:<code>
 &lt;?php 
 $url = 'https://api.zotero.org/users/160881/items/?v=3&format=coins&tag=OBI';
 $var = file_get_contents($url);
 echo $var;
-?&gt;<pre>
+?&gt;<code>
     </li>
 </ol>
 

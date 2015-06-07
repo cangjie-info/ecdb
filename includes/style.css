@@ -1,0 +1,16 @@
+body {
+    width: 1000px;
+    padding-left: 50px;
+    background-color: #d0e4fe;
+    font-family: Comic Sans MS, Tahoma, Helvetica, sans-serif;
+}
+
+p  {}
+
+code {
+        color: #aa0000;
+    }
+    
+ a {
+    text-decoration: none;
+    }

@@ -1,5 +1,5 @@
 <?php require $includes . 'top.html.php'; ?>
-<p>This page outlines all of the tools, software and other components that are currently being used in devloping the ECDB project. The aim to provide a sufficiently complete description so that any of the work could be easlily replicated.</p>
+<p>This page outlines all of the tools, software and other components that are currently being used in developing the ECDB project. The aim to provide a sufficiently complete description so that any of the work could be easlily replicated.</p>
 <h2>Operating systems</h2>
 <h3><a href="http://www.ubuntu.com/download/desktop">Ubuntu</a> Linux 12.04 64bit</h3>
 <ul>
@@ -47,7 +47,7 @@
 </ul>
 <p><a href="http://www.qt.io/download-open-source/">Qt</a>/C++ is used for the development of GUI desktop applications for complex ECDB tasks like image manipulation and transcription editing. The current version of <a href="">Viewer</a> has been developed in Qt4, and compiles successfully on Ubuntu. The longer term goal is to have all apps developed in Qt5, and compiling on both Windows and Ubuntu. Qt is easily installed from the Ubuntu repository or (for Windows) using the msi installer. 
 Visual C++ is one (cost-free) option for a compiler on Windows, but I think MinGW is sufficient for all purposes.</p>
-<p>One complication on Windows. Qt needs a plugin to access MySQL servers. This seems to be absent on the standard Windows installation, and so needs to be compiled. The compilation requires the MySQL library file <code>libmysql.dll</code> and possibly other MySQL developent files that were not included in the (my) Wamp installation. The solution followed the instructions given by <a href="http://seppemagiels.com/blog/create-mysql-driver-qt5-windows">Seppe Magiels</a>.</p>
+<p>One complication on Windows. Qt needs a plugin to access MySQL servers. This seems to be absent on the standard Windows installation, and so needs to be compiled. The compilation requires the MySQL library file <code>libmysql.dll</code> and possibly other MySQL development files that were not included in the (my) Wamp installation. The solution followed the instructions given by <a href="http://seppemagiels.com/blog/create-mysql-driver-qt5-windows">Seppe Magiels</a>.</p>
 <ul>
 <li>Download <code>mysql-5.6.24-win32.zip</code> from <a href="dev.mysql.com"><code>dev.mysql.com</code></a>.</li>
 <li>Unzip to location of choice. Note that MySQL is not being newly installed (it was previously installed with the Wamp package), but this gives us the files we need to compile the Qt plugin.</li>
@@ -61,7 +61,7 @@ Visual C++ is one (cost-free) option for a compiler on Windows, but I think MinG
 <p>For quicker solutions, particularly data wrangling, Python is used.</p>
 
 <h2>Git</h2>
-<p>The version control software <a href="http://git-scm.com/">Git</a> is used to keep track of changes to all code(both that of the html/php pages, and the Qt desktop clients), and to keep the versions on the various development machines and the server in sync with one another. Code for the ECDB project is kept on a <a hreaf="https://github.com/cangjie-info">GitHub</a> repository.</p>
+<p>The version control software <a href="http://git-scm.com/">Git</a> is used to keep track of changes to all code (both that of the html/php pages, and the Qt desktop clients), and to keep the versions on the various development machines and the server in sync with one another. Code for the ECDB project is kept on a <a hreaf="https://github.com/cangjie-info">GitHub</a> repository.</p>
 
 <h2>ssh</h2>
 <h2>FontForge</h2>
