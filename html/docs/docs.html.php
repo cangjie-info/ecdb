@@ -1,7 +1,7 @@
 <?php require $includes . 'top.html.php'; ?>
 
 <h2>Save text image files in repository</h2>
-<p>Images of published text surfaces should be in jpeg format. The file-name is stored in the img_file field of the inscr_surfs table, and so is relatively free to vary in format. However, clearly it makes sense to have image files that are transparently named, with the surface number and the publication name visible in the filename. The directory in which the files are placed, on the other hand, MUST have the same name as the name field in the pubs table, since this is used automatically to generate the correct path to the file. Pub names will be converted to lowercase when generating the path. The file path will be referred to in PHP as $repo_path/text_imgs/<PUBNAME>/<IMGFILE>.
+<p>Images of published text surfaces should be in jpeg format. The file-name is stored in the img_file field of the inscr_surfs table, and so is relatively free to vary in format. However, clearly it makes sense to have image files that are transparently named, with the surface number and the publication name visible in the filename. The directory in which the files are placed, on the other hand, MUST have the same name as the name field in the pubs table, since this is used automatically to generate the correct path to the file. Pub names will be converted to lowercase when generating the path. The file path will be referred to in PHP as <code>$repo_path/text_imgs/<PUBNAME>/<IMGFILE></code>.
 <h2>Backup local db with mysqldump</h2>
 <p>From the local shell:</p> 
 <p><code>mysqldump -u root -p ecdb &gt; ecdb_yyyy-mm-dd.sql</code>.</p>
@@ -19,26 +19,26 @@ zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</code>
 <li>Create an empty db called "ecdb" (using phpmyadmin, or mysql client).</li>
 <li>Open shell prompt, and cd to wherever the .sql file is.</li>
 <li><code>mysql -u root -p ecdb &lt; ecdb.sql</code>.</li>
-<li><ul>
+<li><ol>
    <li>Enter mysql root pw when asked</li>
    <li>Because of the size of the db, it can take about 30-40s to populate the db.
        The prompt just hangs while that is going on.</li>
-   <li>Refresh phpmyadmin page and see if it has worked.</li></ul>
+   <li>Refresh phpmyadmin page and see if it has worked.</li></ol>
 </ol>
  
 <h2>Restore remote (Hostgator) db from sql text file</h2>
-<code>scp &lt;PATH&gt;/ecdb.sql.yyyy-mm-dd &lt;USER&gt;@www.cangjie.info:~/tmp/ecdb.sql
+<pre><code>scp &lt;PATH&gt;/ecdb.sql.yyyy-mm-dd &lt;USER&gt;@www.cangjie.info:~/tmp/ecdb.sql
 ssh www.cangjie.info -l &lt;USER&gt;
 mysql -h localhost -u &lt;DBUSER&gt; -p
 drop database &lt;DBNAME&gt;;
-create database &lt;DBNAME&gt;;</code>
+create database &lt;DBNAME&gt;;</pre></code>
 <p>Exit mysql client.</p>
 <code>mysql -h localhost -u &lt;USERNAME&gt; -p &lt;DBNAME&gt; &lt; ~/tmp/ecdb.sql
 </code>
 
 <h2>Get Zotero item key from Firefox</h2>
 <p>To read an item via the Zotero API, you need to have the item key. Oddly, the Zotero Firefox app does not provide simple access to the item keys. The following export translator will copy the item keys as a comma-separated list to the clipboard on Ctrl+Shift+c in the usual manner. The translator needs to be saved as a javascript file (<code>.js</code> file extension) in the Zotero <code>translators</code> directory.</p>
-<code>{
+<pre><code>{
 "translatorID":"0dbe4ec8-597c-4cc7-bfb5-c38321c5c689",
 "translatorType":2,
 "label":"Zotero Item Key",
@@ -57,7 +57,7 @@ function doExport() {
 	while(item = Zotero.nextItem()) {
     Zotero.write(item.key);
 	}
-}</code>
+}</code></pre>
 
 <h2>Insert COinS data into a web-page</h2>
 <ol><li>Set Zotero Quick Copy default output format to "COinS".</li>

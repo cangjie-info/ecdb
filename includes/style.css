@@ -1,16 +1,21 @@
 body {
-    width: 1000px;
+    width: 700px;
     padding-left: 50px;
-    background-color: #d0e4fe;
+    background-color: #aaaaff;
     font-family: Comic Sans MS, Tahoma, Helvetica, sans-serif;
+    }
+
+p  {
 }
 
-p  {}
-
 code {
-        color: #aa0000;
+        color: #880000;
     }
     
  a {
     text-decoration: none;
     }
+    
+a:visited{
+    color: blue;
+}
