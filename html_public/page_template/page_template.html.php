@@ -1,4 +1,3 @@
 <?php require $includes . 'public_top.html.php'; ?>
 
-</body>
-</html>
+<?php require $includes . 'public_bottom.html.php'; ?>

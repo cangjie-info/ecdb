@@ -120,7 +120,7 @@ Besides the identity of the graph, a variety of mark-up and image-related inform
 <p>The identity of the inscription in which the graph occurs. A reference to the id field in the <a href='#inscrs'><code>inscrs</code></a> table.</p>
 <h5>number</h5>
 <p>The ordinal number of the graph in the sequence of graphs in the inscription. 1, 2, 3, ... etc.</p>
-<h5>markup</h5>
+<h5><a name='markup' />markup</h5>
 <p>This field stores a variety of markup for the graph in the form of bit-flags stored in a single integer value. 
 This is hardly a human-readable format but it is compact and easily handled by client code: bitwise AND to read, OR to set, AND NOT to clear, and XOR to toggle, in the usual manner. The flags currently in use, and as named in an enum in the client code, are:</p>
 <p>
@@ -176,10 +176,4 @@ Items always display in the order in which they appear in this list, except for 
 <h3>ref_gulin</h3>
 <h3>ref_shen2008</h3>
 
-<?php
-
-echo "PHP working.\n";
-
-?>
-</body>
-</html>
+<?php require $includes . 'public_bottom.html.php'; ?>

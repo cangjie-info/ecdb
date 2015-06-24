@@ -45,5 +45,4 @@ Since the GY headwords and fanqie are indepdendent of the ryhmedict project's da
 <h4>Initials</h4>
 
 
-</body>
-</html>
+<?php require $includes . 'public_bottom.html.php'; ?>
