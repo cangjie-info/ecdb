@@ -244,5 +244,4 @@ Try... <p><code>git remote</code></p> <p>This lists all your remote repositories
 
                                                        It will ask you for your username and pw. If you haven't changed anything it will say something like "Already up to date". If you have, your edits will be merged into "origin". Everything you push is publicly accessible, so we won't push any copyrighted material (unless carefully obfuscated) or passwords or personal info.
 
-</body>
-</html>
+<?php require $includes . 'bottom.html.php'; ?>
