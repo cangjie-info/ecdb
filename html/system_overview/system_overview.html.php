@@ -87,7 +87,7 @@ $db_prefix = ''; // needed for remote shared server
 </pre>
     <p>We will set the MySQL password below.</p>
     <p>7. Clone application desktop application code.</p>
-    <p>Currently, the only significant application is <a href='../viewer'>Viewer</a>.The code for this can go anywhere convenient. Mine goes in <code>~/prog/</code>. The procedure is the same for cloning the web pages: <code>git clone https://github.com/cangjie-info/viewer.git</code>.</p>
+    <p>Currently, the only significant application is <a href='../../html_public/docs_viewer'>Viewer</a>.The code for this can go anywhere convenient. Mine goes in <code>~/prog/</code>. The procedure is the same for cloning the web pages: <code>git clone https://github.com/cangjie-info/viewer.git</code>.</p>
 <p>If Qt/C++ was set up correctly, you should be able to compile and run the code for Viewer, although it will behave unimpressively because the backend database has not been set up.</p>
     <p>8. Import MySQL databses</p>
     <p>There are two databases that need to be imported into MySQL. One goes by the name of 'ecdb', provides the back end to the PHP web-based interface, and contains data from CJCN (Matt) and other collections (CHANT). Another is called 'ec', and provides the Viewer application with data on the HD corpus. The structre of the two databases is actually fairly similar, and merging them is a medium-term priority.</p> 
