@@ -2,6 +2,38 @@
 
 <h2>Save text image files in repository</h2>
 <p>Images of published text surfaces should be in jpeg format. The file-name is stored in the img_file field of the inscr_surfs table, and so is relatively free to vary in format. However, clearly it makes sense to have image files that are transparently named, with the surface number and the publication name visible in the filename. The directory in which the files are placed, on the other hand, MUST have the same name as the name field in the pubs table, since this is used automatically to generate the correct path to the file. Pub names will be converted to lowercase when generating the path. The file path will be referred to in PHP as <code>$repo_path/text_imgs/<PUBNAME>/<IMGFILE></code>.
+
+<h2>Configure ssh / git for push to remote shared server (Hostgator)</h2>
+<p>Procedure given here is based on <a href='http://www.arlocarreon.com/blog/git/push-git-repo-into-shared-hosting-account-like-hostgator/'>Arlo Carreon</a>'s instuctions.</p>
+<p>1. Set up ssh access to remote server.</p>
+<p>Request ssh access via Hostgator cPanel. You should then be able to get remote access with... </p>
+<p><code>ssh user@cangjie.info -p 2222</code></p>
+<p>... substituting your user name. Hostgator uses port 2222 for ssh. This will lead to a password prompt. <code>logout</code> to exit.</p>
+<p>We want to bypass the password logon using a public key. To generate a key...</p>
+<p><code>ssh-keygen</code></p>
+<p>The public key will be the contents of the text file <code>~/.ssh/id_rsa.pub</code>. Copy the contents into the file <code>~/.ssh/authorized_keys</code> on the Hostgator server.</p>
+<p>2. Configure git on the remote serrver to accept pushes via ssh.</p>
+<p>ssh into Hostgator. Then run the command <code>git config receive.denyCurrentBranch ignore</code>. Then save the following lines in the text file <code>GIT_REPO_PATH/.git/hooks/post-receive</code>.</p>
+<pre><code>
+#!/bin/sh
+# Save this in: PATH_TO_REPO/.git/hooks/post-receive
+GIT_WORK_TREE=../ git checkout -f
+</code></pre>
+<p>Make that file executable with <code>chmod +x PATH_TO_REPO/.git/hooks/post-receive</code>.</p>
+<p>3. Configure ssh locally to automate connection to Hostgator.</p>
+<p>In order to bypass the password logon, and use the public key set up in step 1., using port 2222, put the following lines into the text file <code>~/.ssh//config</code></p>
+<pre><code>
+Host cangjie.info
+   Port 2222
+   PreferredAuthentications publickey
+</code></pre>
+<p>It is now possible to get ssh access to Hostgator with <code>ssh user@cangjie.info</code>.</p>
+<p>4. Add the Hostgator server as a git remote repository.</p>
+<p><code>cd</code> to the local git repository, and type </p>
+<p><code>git remote add web user@cangjie.info:public_html/ecdb</code></p>
+<p>Now, local changes to the ECDB web pages can be pushed to the live web-site using the simple command: <code>git push web</code>.</p>
+
+
 <h2>Backup local db with mysqldump</h2>
 <p>From the local shell:</p> 
 <p><code>mysqldump -u root -p ecdb &gt; ecdb_yyyy-mm-dd.sql</code>.</p>

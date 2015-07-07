@@ -20,7 +20,7 @@ essential.</p>
   tweaking to get right.</li>
   <li>git - to maintain a local version of the code
   repository.</li>
-  <li>ssh - for easy remote access to the web version of ECDB.</li>
+  <li>ssh - for easy remote access to the web version of ECDB. See the <a href='../docs'>Admin documentation</a> page for instructions on setting up ssh.</li>
   <li>grsync - optional, but this is helpful for syncing
   backups.</li>
 </ul>
@@ -34,7 +34,7 @@ essential.</p>
     <li>qt4-default</li>
     <li>qt5-default</li>
     <li>qtcreator</li>
-  </ul>
+  </ul></ul>
   <p>5. LAMP server stack</p>
   <ul>
     <li>apache2 - webserver, for serving local versions of
@@ -91,56 +91,30 @@ $db_prefix = ''; // needed for remote shared server
 <p>If Qt/C++ was set up correctly, you should be able to compile and run the code for Viewer, although it will behave unimpressively because the backend database has not been set up.</p>
     <p>8. Import MySQL databses</p>
     <p>There are two databases that need to be imported into MySQL. One goes by the name of 'ecdb', provides the back end to the PHP web-based interface, and contains data from CJCN (Matt) and other collections (CHANT). Another is called 'ec', and provides the Viewer application with data on the HD corpus. The structre of the two databases is actually fairly similar, and merging them is a medium-term priority.</p> 
-
-
-
-    <code>
+<p>For instructions on backing up and restoring databases, see the <a href='../docs/'>Admin documentation</a> page.</p>
+<p>9. Add a new user using phpMyAdmin with read privileges on the new databases. Update <code>/var/www/html/mysql.php</code> with the new user's name and password. The local version of the webpages should now display with the browser, adequately apart from the missing fonts. The user name and pw for ec needs to match that given in the <code>db_handler.cpp</code> source code file for Viewer.</p>
+<p>10. Add the <a href='../../html_public/fonts'>fonts</a> needed to work in ECDB.</p> 
+<p>11. Add repository files.</p>
+<p>The local versions of the web pages expect to find the repository at <code>~/ecdb/repository</code>. There should be two subdirectories: <code>text_imgs</code> and <code>sign_list_imgs</code> containing files for {at this stage} the HD and CZCN corpora, and the sign-lists <i>Gulin</i> and Shen &amp; Cao (2008). Because these are outside the web root, we need to set things up so that PHP can access them.
+ For that, we need to set up an 'alias' in apache, so that <code>http://localhost/ecdb/repository/</code> points to <code>~/ecdb/repository/</code>, instead of the expected directory under the web root.</p>
+<p>a/ stop apache<br />
+<code>sudo service apache2 stop</code></p>
+<p>b/ Find the file <code>/etc/apache2/mods-enabled/alias.conf</code>, and 
+use a text editor to add the following lines at the end, just *before*
+the line <code>&lt;/IfModule&gt;</code>
+<pre><code>
+   Alias /ecdb/repository/ "/home/ads/ecdb/repository/"
+   &lt;Directory "/home/ads/ecdb/repository/"&gt;
+       Options FollowSymlinks
+       AllowOverride None
+       Require all granted
+   &lt;/Directory&gt;
+</code></pre>
+You will need to change <code>/home/ads/</code> to the name of your own home directory, obviously, and to make sure that all the directories in the tree <code>/home/ads/ecdb/repository/</code> have read permissions for apache.<p>
+<p>c/ restart apache<br />
+<code>sudo service apache2 restart</code><br />
+(Ignore the "Could not reliably determine...") 
+</p>
       <h2 id='windows'>Windows</h2>
       <h2 id='remote'>Remote hosting</h2>
-      <h2>System components</h2>
-      <h3>Repository</h3>
-      <p>The repository is a fixed directory location where large
-      quantities of essentially static data are stored, and from
-      where they can be accessed by the other componenets of ECDB.
-      The most important data stored here are text images in the
-      form of jpeg page scans of publications. Since much of this
-      material is, unfortunately, under copyright, it cannot be
-      made freely available over the web. Scans of important
-      published sign-lists are also kept here. A set of fonts used
-      by ECDB applications, and dated back-ups of the MySQL
-      database are also kept here.</p>
-      <p>Currently, the repository can be relied upon to contain
-      the following data:
-      <ul>
-        <li>
-          <code>repository/text_imgs/</code>
-          <ul>
-            <li>
-            <code>repository/text_imgs/czcn/</code>- page images
-            from the Cunzhong Cunnan publication.</li>
-            <li>
-            <code>repository/text_imgs/hd/</code>- page images from
-            the HuaDong publication.</li>
-          </ul>
-          <li>
-            <code>repository/fonts</code>
-            <ul>
-              <li>
-              <code>HuaDongFont0.9.ttf</code>- a font for
-              representing that glyph repertoire of the HuaDong
-              corpus.</li>
-            </ul>
-          </li>
-          <li>
-            <code>mysql_dumps sign_list_imgs text_imgs 
-            <h3>Code for web-pages</h3>
-            <h3>Code for Desktop application development</h3>
-            <h3>MySQL database</h3>
-            <h3>Zotero database</h3>
-            <h2>System setup by platform</h2>
-            <h3>Ubuntu</h3>
-            <h3>Windows</h3>
-            <h3>Remote
-            server</h3>
-
 <?php require $includes . 'bottom.html.php'; ?>

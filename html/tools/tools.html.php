@@ -5,7 +5,7 @@ project. The aim to provide a sufficiently complete description so
 that any of the work could be easlily replicated.</p>
 <h2>Operating systems</h2>
 <h3>
-<a href="http://www.ubuntu.com/download/desktop">Ubuntu</a>Linux
+<a href="http://www.ubuntu.com/download/desktop">Ubuntu</a> Linux
 12.04 64bit</h3>
 <ul>
   <li>Ubuntu Linux 12.04 64 bit</li>
@@ -26,7 +26,7 @@ either.</p>
 <p>The live version of these web-pages, together with the live
 version of the ECDB MySQL database, are hosted on a
 bottom-of-the-range 
-<a href="http://www.hostgator.com/shared">Hostgator</a>shared
+<a href="http://www.hostgator.com/shared">Hostgator</a> shared
 server account ("Hatchling"). This costs about $80 / year.</p>
 <h2>HTML, PHP, CSS</h2>
 <p>The online web-pages for the project, including the
@@ -40,16 +40,16 @@ complex than that will be documented in these pages.</p>
   <li>phpMyAdmin &gt; ver 4.3.8</li>
 </ul>
 <p>
-<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a>was
+<a href="https://dev.mysql.com/downloads/mysql/">MySQL</a> was
 chosen as the database server for ECDB because it is popular,
 powerful, well-documented, integrates easily with PHP, and is
 offered as standard by web-hosting packages. It is easily installed
 on Ubuntu using the standard repository, and is easy to install on
 Windows using 
-<a href="http://www.wampserver.com/en/">WAMP</a>. The structure of
+<a href="http://www.wampserver.com/en/">WAMP</a> . The structure of
 the ECDB database is modified using 
 <a href="http://www.phpmyadmin.net/home_page/index.php">
-phpMyAdmin</a>and working on a local copy of the database, which is
+phpMyAdmin</a> and working on a local copy of the database, which is
 then uploaded to the remote server. This, and other related backup
 procedures are described elsewhere.</p>
 <h2>Web server</h2>
@@ -79,11 +79,11 @@ interfaces to the database, a standard Wamp (Windows) or Lamp
     <li>MinGW 4.9.1 32 bit</li>
   </ul>
   <p>
-  <a href="http://www.qt.io/download-open-source/">Qt</a>/C++ is
+  <a href="http://www.qt.io/download-open-source/">Qt</a> /C++ is
   used for the development of GUI desktop applications for complex
   ECDB tasks like image manipulation and transcription editing. The
   current version of 
-  <a href="">Viewer</a>has been developed in Qt4, and compiles
+  <a href="">Viewer</a> has been developed in Qt4, and compiles
   successfully on Ubuntu. The longer term goal is to have all apps
   developed in Qt5, and compiling on both Windows and Ubuntu. Qt is
   easily installed from the Ubuntu repository or (for Windows)
@@ -98,13 +98,13 @@ interfaces to the database, a standard Wamp (Windows) or Lamp
   files that were not included in the (my) Wamp installation. The
   solution followed the instructions given by 
   <a href="http://seppemagiels.com/blog/create-mysql-driver-qt5-windows">
-  Seppe Magiels</a>.</p>
+  Seppe Magiels</a> .</p>
   <ul>
     <li>Download 
     <code>mysql-5.6.24-win32.zip</code>from 
     <a href="dev.mysql.com">
       <code>dev.mysql.com</code>
-    </a>.</li>
+    </a> .</li>
     <li>Unzip to location of choice. Note that MySQL is not being
     newly installed (it was previously installed with the Wamp
     package), but this gives us the files we need to compile the Qt
@@ -125,13 +125,13 @@ interfaces to the database, a standard Wamp (Windows) or Lamp
   used.</p>
   <h2>Git</h2>
   <p>The version control software 
-  <a href="http://git-scm.com/">Git</a>is used to keep track of
+  <a href="http://git-scm.com/">Git</a> is used to keep track of
   changes to all code (both that of the html/php pages, and the Qt
   desktop clients), and to keep the versions on the various
   development machines and the server in sync with one another.
   Code for the ECDB project is kept on a 
   <a hreaf="https://github.com/cangjie-info">
-  GitHub</a>repository.</p>
+  GitHub</a> repository.</p>
   <h2>ssh</h2>
   <h2>FontForge</h2>
   <h2>Glyphtracer</h2>
