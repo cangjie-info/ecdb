@@ -15,7 +15,7 @@
 <ul>
 <li>g++ - C++ compiler</li>
 <li>Qt 4 and Qt 5 - selecting the following packages in synaptic is probably sufficient. Everything else should come along for the ride as dependencies:
-<ul><li>qt4-default</li><li>qt5-default</li><li>qtcreator</li></ul>
+<ul><li>qt4-default</li><li>qt5-default</li><li>qtcreator</li><li>libqt4-sql-mysql</li><li>libqt5sql5-mysql</li></ul>
 </ul>
 <p>5. LAMP server stack</p>
 <ul>
@@ -41,6 +41,7 @@ $db_prefix = ''; // needed for remote shared server
 ?&gt;
 </pre>
 <p>We will set the MySQL password below.</p>
+<p>You may want to reset permissions on the <code>/var/www/html/</code> directory so that it can be edited withou superuser privileges.</p>
 <p>7. Clone application desktop application code.</p>
 <p>This can go anywhere convenient. Mine goes in <code>~/prog/</code>. The procedure is the same for cloning the web pages: <code>
 <h2 id='windows'>Windows</h2>

@@ -10,8 +10,8 @@
 <h2>Backup remote db with mysqldump</h2>
 <code>ssh www.cangjie.info -l &lt;USER&gt;</code>
 <p>Navigate to backup directory.</p>
-<code>mysqldump -u &lt;USER&gt; -p &lt;DBNAME&gt; &gt; ecdb.sql.yyyy.mm.dd
-zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</code>
+<pre><code>mysqldump -u &lt;USER&gt; -p &lt;DBNAME&gt; &gt; ecdb.sql.yyyy.mm.dd
+zip ecdb.sql.yyyy.mm.dd.zip ecdb.sql.yyyy.mm.dd</code></pre>
 
 <h2>Restore local db from sql text file</h2>
 <ol>
@@ -80,7 +80,8 @@ function doExport() {
         <li>For a single bibliographic item, add <code>items/&lt;itemkey&gt;</code>. To discover the item key, see the HowTo on this page.</li>
         <li>Item example: <code>https://api.zotero.org/users/160881/items/8HTNV32W/?v=3&format=bib&style=elsevier-harvard2</code>. <code>160881</code> is my user id. <code>8HTNV32W</code> is the item id in my Zotero database. <code>v=3</code> selects the most recent API version number (i.e. ver. 3). <code>format=bib</code> requests that the data be formatted as an XHTML bibliography. <code>style=elsevier-harvard2</code> sets the citation style. I like elsevier-harvard2 because 1/ it doesn't pointlessly capitalize all title words, and 2/ it doesn't italicize Chinese (or any) titles. See the result returned by this URL <a href="https://api.zotero.org/users/160881/items/8HTNV32W/?v=3&format=bib&style=elsevier-harvard2">here.</a></li> 
         <li>Multiple item example: <code>https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&itemKey=UDAKWEPD,6MPC3NRH,BETZ6T8M,2A44Q48D,9KDGT7VK,24MN76X3,IFITWC8S,5JKVSN7X,DSF26IDM,2W76QV2C,983IUQW6,5IBA73W6</code>. Notice that the item keys are now a comma-separated list in the query string. Result is <a href="https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&itemKey=UDAKWEPD,6MPC3NRH,BETZ6T8M,2A44Q48D,9KDGT7VK,24MN76X3,IFITWC8S,5JKVSN7X,DSF26IDM,2W76QV2C,983IUQW6,5IBA73W6">here</a>.</li>
-        <li>Tag example: to return a bibliography of all items with a particular tag use tag=<tagname> in the query string. E.g. <code>https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI</code>. Result is <a href="https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI">here</a>. For more complocated tag queries, see the <a href="https://www.zotero.org/support/dev/web_api/v2/read_requests">Documentation</a>.</li>
+        <li>Tag example: to return a bibliography of all items with a particular tag use tag=<tagname> in the query string. E.g. <code>https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI</code>. Result is <a href="https://api.zotero.org/users/160881/items/?v=3&format=bib&style=elsevier-harvard2&tag=OBI">here</a>. 
+        For more complicated tag queries, see the <a href="https://www.zotero.org/support/dev/web_api/v2/read_requests">Documentation</a>.</li>
         <li>COinS: By changing the <code>format=bib</code> to <code>format=coins</code>, a set of <code>&lt;span&gt;</code>s containing COinS data is returned instead. <code>https://api.zotero.org/users/160881/items/?v=3&format=coins&tag=OBI</code>.</li> 
     </ul>
     <li>Adding the bibliograpic data to a php/html webpage is simple:<code>
@@ -88,113 +89,64 @@ function doExport() {
 $url = 'https://api.zotero.org/users/160881/items/?v=3&format=coins&tag=OBI';
 $var = file_get_contents($url);
 echo $var;
-?&gt;<code>
+?&gt;</code>
     </li>
 </ol>
 
 <h2>Install git</h2>
 <p><code>sudo apt-get install git</code> (or use synaptic)</p>
-<!--
-2. IDENTIFY YOUR APACHE WEBROOT
-I expect this to be /var/www/html/ - that should already exist from your apache installation - if not, we need to work out where that is. If there are things already in your /var/www/html/, you can either
-retain them if you think they are useful, or delete them. Doesn't matter.
 
-Whatever is under the webroot gets served as a webpage when you navigate
-the browser to http://localhost
-
-e.g. Apache will respond to the browser request for
-   http://localhost/blah/blah/index.php
-   by serving the webpage at
-       /var/www/html/blah/blah/index.php
-       and so on.
-
-       3. CLONE MY GITHUB REPOSITORY
+<h2>Clone Github repository</h2>
+<pre><code>
        cd /var/www/html
        git clone https://github.com/cangjie-info/ecdb.git
+</code></pre>
+      <p>You need to have your internet connection open for that, obviously. That will download a few directories and html/php files. They should now all be inside <code>/var/www/html/ecdb/</code>
 
-       You need to have your internet connection open for that, obviously. That will download a few directories and html/php files. They should now all be inside /var/www/html/ecdb/
-       You should be able to find
-       ..../ecdb/html/ (for our pw-protected online pages)
-       ..../ecdb/html_public/ (no pw)
-       ..../ecdb/includes/ (code that other pages reuse often)
+      <p>You should be able to find</p>
+       <p><code>..../ecdb/html/</code> (for pw-protected online pages)</p>
+       <p><code>..../ecdb/html_public/</code> (no pw)</p>
+       <p><code>..../ecdb/includes/</code> (code that other pages reuse often)</p>
 
-       There is also a hidden directory
-       /var/www/html/ecdb/.git/
-       This is where git keeps track of everything. We don't need to touch it. If at any stage something goes horribly wrong and you want to start over, just delete the entire ecdb directory, and you will have cleared everything.
+       <p>There is also a hidden directory
+       <code>/var/www/html/ecdb/.git/</code>
+       This is where git keeps track of everything. We don't need to touch it. If at any stage something goes horribly wrong and you want to start over, just delete the entire ecdb directory, and you will have cleared everything.</p>
 
-       4. CREATE MYSQL ACCOUNT FOR PHP, AND CREDENTIALS FILE
-       I've attached a file called mysql.php. This contains the logon credentials for php to access mysql. Copy it to
-       /var/www/html/mysql.php
-       If we were serving pages over the internet we wouldn't put it here under the web-root because it is not secure. But this is a local version and it's easier to keep track of here. Take a look at the file with a text editor. You can see four php variables - the ones you are interested in are:
-       $db_user
-       $db_pw
-       You need to create a mysql user using phpmyadmin. it will have a user
-       name and a pword. Edit mysql.php to put the user name in the $db_user variable (mine is called 'php'). Put the pword in $db_pw (mine is 'BWV582'). When you create the user you need to grant it privileges on the database ecdb. In principle, we are supposed to grant as few privileges as possible (to protect the db from our own errors and the malice of others), but the stakes aren't very high in this case. Currently, none of the web pages modify the db, so SELECT is the only privilege necessary. But that will change, so why not grant all "Data" and "Structure" privileges on ecdb for now.
-
-       5. APACHE ALIAS
-       This caused me a few hours of grief, but I finally got it figured out.
-       We want apache to be able to serve image files in the regular way. For
+<h2>Create MySQL account for PHP, and credentials file</h2>
+      <p>The credentials file <code>mysql.php</code> contains the logon credentials for php to access mysql. For the local (development) version of the web-pages, it should be located at <code>/var/www/html/mysql.php</code></p>
+<h2>Apache alias</h2>
+<p>We want apache to be able to serve image files in the regular way. For
        example:
-       http://localhost/ecdb/repository/sign_list_imgs/sc/sc_0024.jpg
+       <code>http://localhost/ecdb/repository/sign_list_imgs/sc/sc_0024.jpg</code>
        should give us an image of Shen & Cao (2008:24). But, I wanted all my
-       img files outside the webroot (they are in ~/ecdb/repository/ ). Apache
-       is designed only to serve files under the webroot normally (for security
-       - so that you don't end up accidentally serving all the secrets on your
-       hard drive to the world). So you need to set up an "alias" to make
-       http://localhost/ecdb/repository/
-       point to a different directory, viz. ~/ecdb/repository/
-       instead of /var/www/html/ecdb/repository/
+       img files outside the webroot (they are in <code>~/ecdb/repository/</code> ). Apache
+       is designed only to serve files under the webroot normally (for security). So you need to set up an "alias" to make
+       <code>http://localhost/ecdb/repository/</code>
+       point to a different directory, viz. <code>~/ecdb/repository/</code>
+       instead of <code>/var/www/html/ecdb/repository/</code></p>
 
-       So...
+       <p>So...</p>
 
-       1/ stop apache
-       sudo service apache2 stop
+       <p>1/ stop apache</p>
+       <p><code>sudo service apache2 stop</code></p>
 
-       2/ find the file /etc/apache2/mods-enabled/alias.conf
+       <p>2/ find the file <code>/etc/apache2/mods-enabled/alias.conf</code> 
        Use a text editor to add the following lines at the end, just *before*
-       the line </IfModule>
+       the line <code>&lt;/IfModule&gt;</code></p>
+       <p><pre><code>
+Alias /ecdb/repository/ "/home/ads/ecdb/repository/"
+&lt;Directory "/home/ads/ecdb/repository/"&gt;
+   Options FollowSymlinks
+   AllowOverride None
+   Require all granted
+&lt;/Directory&gt;
+</code></pre></p>
+<p>Save.</p>
 
-             Alias /ecdb/repository/ "/home/ads/ecdb/repository/"
-                   <Directory "/home/ads/ecdb/repository/">
-                             Options FollowSymlinks
-                                       AllowOverride None
-                                                 Require all granted
-                                                       </Directory>
+<p>3/ restart apache</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>(Ignore the "Could not reliably determine...")</p>
 
-                                   That should be 6 lines if the email hasn't broken them. You will also
-                                   need to change "ads" (2 instances) to whatever your linux user name is.
-                                   Save.
-
-                                   3/ restart apache
-                                   sudo service apache2 restart
-                                  (Ignore the "Could not reliably determine...")
-
-                                   Also, you should be able to see how to modify that alias so that you can place your ecdb/repository directory wherever you want, but I'll leave that to you.
-
-                                   6. REPOSITORY
-                                   This is where our images of scanned publications go. Since these
-                                   collections are vast, just create the empty directory structure and we
-                                   can work out how to transfer the files later.
-                                   /home/ads/ecdb/repository/sign_list_imgs/sc/ (that's for shen & cao)
-                                   /home/ads/ecdb/repository/text_imgs/czcn/ (that's for czcn)
-
-                                   Again, you need to replace "ads" by your linux username.
-                                   /home/<user>/ is the same as ~/
-
-                                   Download the Shen & Cao imgs:
-                                   https://www.dropbox.com/sh/cw6ir1vukl47pzo/AAB1aHBm64DAl-wDJU7fWvD-a
-
-                                   You can delete the pdfs. Make sure that all the .jpgs are directly under
-                                   /home/<user>/ecdb/repository/sign_list_imgs/sc/
-
-                                   If you've done everything so far, you should be able to access Shen &
-                                   Cao page images via this local webpage:
-                                   http://localhost/ecdb/html/shen2008/
-                                   A good test to see whether everything is working. Is it? If it's not, we need to trouble shoot before trying anything else.
-
-                                   7. CLIENT CODE / EXECUTABLES
-                                   Let's deal with this later. We can use git for that too.
--->
 <h2>Some git commands</h2>
 <code>git clone &lt;url&gt;</code>
 <p>
@@ -211,38 +163,17 @@ Try... <p><code>git remote</code></p> <p>This lists all your remote repositories
 <p>This reports the exact changes, all tracked files, line by line. If you want to discard the changes you use:</p>
 <p><code>git checkout -- &lt;filename&gt; (or multiple &lt;filename&gt;s)</code></p>
 
-                                                       The changes are not just reverted; they are irretrievably lost. Try git diff and git status to confirm the reversion.
+<p>The changes are not just reverted; they are irretrievably lost. Try git diff and git status to confirm the reversion. If you add a new file anywhere under <code>..../ecdb/</code>, "git status" will report the addition. But any changes to the new file will not be tracked unless/until you use:</p>
 
-                                                       If you add a new file anywhere under ..../ecdb/, "git status" will report the addition. But any changes to the new file will not be tracked unless/until you use:
+<p><code>git add &lt;filename&gt; (or multiple &lt;filename&gt;s)</code></p>
+<p>If you decide that the current state of changes to a particular file(s) are likely to be worth keeping (i.e. you've spell-checked, you've tested the web-page, etc.), again use:</p>
+<p><code>git add &lt;filename&gt; (or multiple &lt;filename&gt;s)</code></p>
+<p>This takes a snapshot of the state of the file. git diff will go back to showing nothing, until you make additional changes. If you decide that all the current snapshots are worth preserving as a stage in the development of the project, use:</p>
 
-                                                       git add <filename> (or multiple <filename>s)
+<p><code>git commit -m 'I made some changes'</code></p>
 
-                                                       If you decide that the current state of changes to a particular file(s) are likely to be worth keeping (i.e. you've spell-checked, you've tested the web-page, etc.), again use:
-
-                                                       git add <filename> (or multiple <filename>s)
-
-                                                       This takes a snapshot of the state of the file. git diff will go back to showing nothing, until you make additional changes. If you decide that all the current snapshots are worth preserving as a stage in the development of the project, use:
-
-                                                       git commit -m 'I made some changes'
-
-                                                       This will record all the changes since the "add"s - any changes that you made after "add"-ing will be retained but won't be in that particular commit. You can "add" again when you are ready.
-
-                                                       git log
-
-                                                       Gives a listing of all the previous commits in the history of the project. SPACE to page down, q to quit. These are all the stages that we can roll back to or examine.
-
-                                                       9. GET A GITHUB ACCOUNT
-                                                       Final step. This is so you can push your edits back into "origin" so I can share them too.
-
-                                                       https://github.com/
-                                                       needs username, pw and email.
-
-                                                       Let me know the username by email and I will add you as a collaborator, giving you write access to the remote repository. Then...
-
-                                                       cd /var/www/html/ecdb/
-                                                       git push origin
-
-                                                       It will ask you for your username and pw. If you haven't changed anything it will say something like "Already up to date". If you have, your edits will be merged into "origin". Everything you push is publicly accessible, so we won't push any copyrighted material (unless carefully obfuscated) or passwords or personal info.
-
+<p>This will record all the changes since the "add"s - any changes that you made after "add"-ing will be retained but won't be in that particular commit. You can "add" again when you are ready.</p>
+<p><code>git log</code></p>
+<p>Gives a listing of all the previous commits in the history of the project. SPACE to page down, q to quit. These are all the stages that we can roll back to or examine.</p>
 </body>
 </html>
