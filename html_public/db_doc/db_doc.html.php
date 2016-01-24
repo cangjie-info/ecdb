@@ -48,7 +48,7 @@ The publications in which published inscribed surfaces are found are listed in <
 <li><code>inscr_object_types</code></li>
 <li><code>inscr_objects</code></li>
 <li><code>inscr_surf_types</code></li>
-<li><code>inscr_surfs</code></li>
+<li><code><a href='#inscr_surfs'>inscr_surfs</a></code></li>
 <li><code>inscrs</code></li>
 <li><code>pubs</code></li>
 </ul>
@@ -169,7 +169,26 @@ Items always display in the order in which they appear in this list, except for 
 <h3>inscr_object_types</h3>
 <h3>inscr_objects</h3>
 <h3>inscr_surf_types</h3>
-<h3>inscr_surfs</h3>
+<h3><a id='inscr_surfs'>inscr_surfs</a></h3>
+<p>This table represents published inscribed surfaces. If an inscribed surface appears in more than one publication, it should appear more than once in this table. If an inscribed object has more than one inscribed surfce,
+we should expect them to appear as distinct rows in this table. Note that all traditional print publications are publications of (rubbings, photos etc. of) <em>surfaces</em>.
+Some publications have numbering schemes that number surfaces, while others (e.g. 合集) instead try to number objects and to disambiguate surfaces with suffixes like 正, 反, 臼 etc. One function of this table is to store the file-names of the image files of inscriptions.</p>
+
+<h4>Fields</h4>
+<h5>id</h5>
+<h5>inscr_object_id</h5>
+<h5>surf_type_id</h5>
+<h5>notes</h5>
+<h5>img_file</h5>
+<h5>pub_id</h5>
+<h5>name</h5>
+<p>The name of the inscribed surface as it is recorded in the original publication. This will usually be some kind of serial numbering, but sometimes with various disambiguating suffixes like 正, 反, or 臼. The best practice for naming surfaces in the database is probably to zero-pad to enough places to cover all the numbers in the publication. Zero-padding ebables a natural sort-order. Suffixes should be alphabetic rather than Chinese. Follow this scheme:</p>
+<ul><li>正 : o (for "obverse")</li>
+<li>反 : r (for "reverse")</li>
+<li>臼 : g (for "glenoid cavity")</li>
+</ul>
+<h5>x1, y1, x2, y2, rotation</h5>
+
 <h3><a id='inscrs'>inscrs<a></h3>
 <h3>pubs</h3>
 <h3>ref_chant</h3>
