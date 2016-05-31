@@ -2,12 +2,16 @@ body {
     width: 700px;
     padding-left: 50px;
     background-color: #aaaaff;
-    font-family: Comic Sans MS, Tahoma, Helvetica, sans-serif;
+    font-family: 'Comic Sans MS', Tahoma, Helvetica, sans-serif;
     }
 
 p  {
 }
 
+.ics3{
+   font-family: ICS3; 
+   word-wrap: break-word;
+}
 code {
         color: #880000;
     }
