@@ -22,9 +22,9 @@ if (!is_numeric($id))
 }
 
 $query = 'SELECT graphs.id AS id,
-            ics3_glyph AS ics3,
-            ics4_glyph AS ics4,
-            hd_glyph AS hd,
+            ICS3,
+            ICS4,
+            HuaDong AS hd,
             gulin AS gulin,
             count(inscr_graphs.graph_id) AS count,
             CONCAT(shen2008_number, shen2008_var) AS shen2008,
@@ -46,8 +46,8 @@ if (!$result)
 }
 
 $row = mysqli_fetch_array($result);
-$ics3 = $row['ics3']; 
-$ics4 = $row['ics4'];
+$ics3 = $row['ICS3']; 
+$ics4 = $row['ICS4'];
 $hd = $row['hd'];
 $gulin = $row['gulin'];
 $count = $row['count'];

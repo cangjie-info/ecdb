@@ -19,7 +19,7 @@ $row = mysqli_fetch_array($result);
 $graph_count = $row['count'];
 
 $query = 'SELECT graphs.id AS id, 
-            ics3_glyph AS ics3, 
+            ICS3, 
             matt_glyph,
             matt_cp,
             count( inscr_graphs.graph_id ) AS count
@@ -42,7 +42,7 @@ $running_total = 0;
 while ($row = mysqli_fetch_array($result))
 {
     $id[] = $row['id'];
-    $ics3[] = $row['ics3'];
+    $ics3[] = $row['ICS3'];
     $matt_glyph[] = $row['matt_glyph'];
     $matt_cp[] = $row['matt_cp'];
     $count[] = $row['count'];

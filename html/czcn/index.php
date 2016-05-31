@@ -9,7 +9,7 @@ $query = 'select inscr_surfs.name AS name,
     inscrs.number AS inscr_number,
     inscr_graphs.markup AS markup,
     inscr_graphs.punc AS punc,
-    graphs.ics3_glyph AS ics3,
+    graphs.ICS3 AS ics3,
     matt_glyph,
     matt_cp,
     img_file

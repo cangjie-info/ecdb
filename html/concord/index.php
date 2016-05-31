@@ -25,7 +25,7 @@ if (!is_numeric($id))
 $query = 'SELECT inscrs.id AS inscr, 
                  inscr_surf_id, 
                  graph_id, 
-                 ics3_glyph
+                 ICS3 AS ics3_glyph
         FROM inscrs
         INNER JOIN inscr_graphs
         ON inscrs.id = inscr_graphs.inscr_id

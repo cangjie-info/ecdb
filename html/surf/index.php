@@ -24,7 +24,7 @@ if (!is_numeric($id))
 $query = 'SELECT graphs.id AS graph,
                 inscr_surfs.name AS surf, 
                 inscrs.number AS inscr, 
-                ics3_glyph AS ics3,
+                ICS3 AS ics3,
                 pubs.name AS pub,
                 pubs.zotero AS zotero,
                 img_file
