@@ -138,31 +138,39 @@ This is hardly a human-readable format but it is compact and easily handled by c
 <p>It is almost certain that additional mark-up flags will be added in future.</p>
 
 <h5>x1, y1, x2, y2 and rotation</h5>
-<p>These fields record the position and rotations of the bouding box required to crop the graph thumbnail image from the image of the inscription.</p>
+<p>These fields record the position and rotations of the bounding box required to crop the graph thumbnail image from the image of the inscription.</p>
 <h5>punc</h5>
 <p>Punctuation represented by this field is <em>editorial</em> punctuation. It does not refer to marks or signs appearing in the original inscription. 
-They would be encoded as graphs inline with the text, not as markup.</p>
-<p>Punctuation comes in two flavors: pre-punctuation is punctuation that is inserted <em>before</em> the graph it is associated with in the stream of text. Post-punctuation refers to punctuation that is inserted <em>after</em> the graph with which it is associated. ECDB permits the following punctuation (pre-punctuation is the first three items in the list and the final two; the remainder are post-puntuation). Anything like a paragraph-break should (probably?) be treated as a section division.</p>
+(They would be encoded as graphs inline with the text, not as markup.)</p>
+<p>Punctuation associated with a particular graph is represented using a single integer, the individual bits of which indicate the presence or absence of the possible punctuation characters.
+Punctuation comes in two flavors: pre-punctuation is punctuation that is inserted <em>before</em> the graph it is associated with in the stream of text. Post-punctuation refers to punctuation that is inserted <em>after</em> the graph with which it is associated. 
+The list below shows the punctuation currently permitted by ECDB, with their corresponding bits. Currently, a two-byte integer is wide enough to accommodate all combinations of permitted punctuation, with one bit to spare.</p>
 <p>
 
-<code>LEFTQUOTE = 1 “</code><br/>
-<code>LEFTINNERQUOTE = 2 ‘</code><br/>
-<code>LEFTTITLE = 4 《</code><br/>
-<code>RIGHTTITLE = 8 》</code><br/>
-<code>PERIOD = 16 。</code><br/>
-<code>QUESTION = 32 ？</code><br/>
-<code>EXCLAMATION = 64 ！</code><br/>
-<code>LISTCOMMA = 128 、</code><br/>
-<code>COMMA = 256 ，</code><br/>
-<code>COLON = 512 ：</code><br/>
-<code>RIGHTINNNERQUOTE = 1024 ’</code><br/>
-<code>RIGHTQUOTE = 2048 ”</code><br/>
-<code>TAB = 4096 (indent, for verse sections, etc. - prepunc)</code><br/>
-<code>NEWLINE = 8192 (start new line, for verse sections, paragraphs in long prose passages or speeches, etc. - prepunc)</code><br/>
-<p><code>PERIOD, QUESTION, EXCLAMATION,</code> and <code>COLON</code> will be used to mark sentence endings during editing. Sentences are nevertheless modelled independently of punctuation.<br/>
-</p>
-<p>Only one of each punctuation item is permitted under this arrangment. Quotes can be nested, but only to a depth of two. 
-Items always display in the order in which they appear in this list, except for the last two items: <code>NEWLINE</code> displays before all others, followed by </code>TAB</code>. E.g. a PERIOD always comes after a RIGHTTITLE but before a RIGHTQUOTE.<p>
+<code>LEFTQUOTE = 1  = 2^0 “</code><br/>
+<code>LEFTINNERQUOTE = 2 = 2^1 ‘</code><br/>
+<code>LEFTTITLE = 4 = 2^2 《</code><br/>
+<code>RIGHTTITLE = 8 = 2^3 》</code><br/>
+<code>PERIOD = 16 = 2^4 。</code><br/>
+<code>QUESTION = 32 = 2^5 ？</code><br/>
+<code>EXCLAMATION = 64 = 2^6 ！</code><br/>
+<code>LISTCOMMA = 128 = 2^7 、</code><br/>
+<code>COMMA = 256 = 2^8 ，</code><br/>
+<code>COLON = 512 = 2^9 ：</code><br/>
+<code>RIGHTINNNERQUOTE = 1024 = 2^10 ’</code><br/>
+<code>RIGHTQUOTE = 2048 = 2^11 ”</code><br/>
+<code>TAB = 4096 = 2^12 (indent, for verse sections, etc.)</code><br/>
+<code>NEWLINE = 8192 = 2^13 (start new line, for verse sections, paragraphs in long prose passages or speeches, etc.)</code><br/>
+<code>SEMICOLON = 16384 = 2^14 ; </code><br/>
+<br/>
+<code>PREPUNC = [NEWLINE, TAB, LEFTQUOTE, LEFTINNERQUOTE, LEFTTITLE]</code><br/>
+<code>POSTPUNC = [RIGHTTITLE, PERIOD, QUESTION, EXCLAMATION, LISTCOMMA, COMMA, COLON, SEMICOLON, RIGHTINNERQUOTE, RIGHTQUOTE]</code><br/>
+<p>When displaying text, the order of punctuation characters should follow their order within the <code>PREPUNC</code> and <code>POSTPUNC</code> lists. 
+I.e. an <code>EXCLAMATION</code> always displays before a <code>RIGHTINNERQUOTE</code>, and a <code>PERIOD</code> always comes after a <code>RIGHTTITLE</code> but before a <code>RIGHTQUOTE</code>.<p>
+<p>The items in the following list are those which reliably indicate syntactic sentence divisions. This is useful for dividing a source text into sentence when importing to ECDB. Note that in the practice of many editors, <code>COMMA</code> often coincides with syntactic sentence divisions, but not reliably. This needs to be disambiguated subsequently.</p>
+<p><code>SENTENCEPUNC = [PERIOD, QUESTION, EXCLAMATION, COLON, SEMICOLON]</code>
+<p>Under this arrangment, quotes can be nested, but only to a depth of two.</p> 
+
 <h5>ling_value_id</h5>
 <p>The lingistic value of (morpheme written by) the graph.</p>
 

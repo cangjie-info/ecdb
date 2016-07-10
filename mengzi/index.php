@@ -28,7 +28,7 @@ $query = 'SELECT subcontainers.name_en,
             ON narrative_id = narratives.id
          INNER JOIN inscr_graphs
             ON sentence_id = sentences.id
-         WHERE container_id = 39
+         WHERE container_id = 40
          GROUP BY subcontainers.id
          ORDER BY subcontainers.number;';
 
@@ -39,8 +39,9 @@ if(!$result)
    include $includes . 'error.html.php';
    exit();
 }
-
+echo "DONE SO FAR";
 $rows = [];
+echo " ROWS = " . count($rows);
 while ($row = mysqli_fetch_assoc($result))
 {
    $rows[] = $row;
