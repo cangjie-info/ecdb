@@ -39,9 +39,7 @@ if(!$result)
    include $includes . 'error.html.php';
    exit();
 }
-echo "DONE SO FAR";
 $rows = [];
-echo " ROWS = " . count($rows);
 while ($row = mysqli_fetch_assoc($result))
 {
    $rows[] = $row;

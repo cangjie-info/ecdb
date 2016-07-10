@@ -45,7 +45,10 @@
    </head>
    <body>
       <h1>Mengzi 孟子</h1>
-
+<p>Table showing division the Mencius text into its 14 chapters, with counts of numbers of narratives per chapter, and lengths of chapters by character count. The figures in the table are drawn live from the MySQL database of the text.
+Two things I hadn't noticed before: 1/ All 14 chapters are about the same length at ca. 2500 characters. 
+This was probably dictated by the physical format of the Han edition - that's how many characters fit into a roll of silk, or whatever the medium was. 
+2/ The two 盡心 chapters at the end (and to a lesser extent the 離婁 chapters half way through) were used as a sort of dumping ground for small chunks of narrative material.</p>
 <table>
    <tr>
       <th colspan='2'>Subcontainer</th>
@@ -67,6 +70,8 @@ for ($i = 0; $i < count($name_zh); $i++)
 
 ?>
 </table>
+
+<h2><a href="https://developers.google.com/chart/">Google chart</a> of the same data.</h2>
       <div id='chart_div'></div>
    </body>
 </html>
