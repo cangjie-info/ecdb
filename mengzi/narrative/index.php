@@ -34,6 +34,9 @@ $POSTPUNC_BITMASK = [
         2048 => '”'];
 
 $narrative_id = 174;
+if(isset($_GET["id"])) {
+   $narrative_id = intval($_GET["id"]);
+}
 
 $query = 'SELECT TEST_graph, punc, sentences.number AS sn
           FROM narratives
