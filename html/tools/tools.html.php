@@ -150,5 +150,6 @@ interfaces to the database, a standard Wamp (Windows) or Lamp
     removing any tags: 
     <code>tidy -iqm -xml --force-output yes
     &lt;file&gt;</code></li>
+    <li>Bulk rename files using regex: <code>rename -v 's/yingcang/uk/' *</code></li>
   </ul>
 <?php require $includes . 'bottom.html.php'; ?>
