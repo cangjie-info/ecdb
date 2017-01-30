@@ -1,4 +1,5 @@
-<?php require $includes . 'top.html.php'; ?>
+<?php require $includes . 'top1.html.php'; ?>
+<?php require $includes . 'top2.html.php'; ?>
 <p>Bigrams with headword second, in order of frequency:</p>
 <table style="width:400px">
 <tr>

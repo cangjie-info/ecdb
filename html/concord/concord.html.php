@@ -1,4 +1,5 @@
-<?php require $includes . 'top.html.php'; ?>
+<?php require $includes . 'top1.html.php'; ?>
+<?php require $includes . 'top2.html.php'; ?>
 
 <?php
 $current_inscr = 0;
