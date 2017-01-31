@@ -38,7 +38,8 @@ $query = 'SELECT ICS3 AS headword
    FROM graphs
    WHERE id = ' . "$id;";
 
-$result = mysqli_query($link, $query);
+//$result = mysqli_query($link, $query);
+$result = $pdo->query($query);
 if (!$result)
 {
     $output = 'Error fetching XYZ: ' . mysqli_error($link);
@@ -46,7 +47,7 @@ if (!$result)
     exit();
 }
 
-$headword = mysqli_fetch_array($result)['headword'];
+$headword = $result->fetch()['headword'];
 
 $query1 = 'SELECT g1.ICS3 AS ics, COUNT(g1.ICS3) AS count
    FROM 
@@ -60,15 +61,15 @@ $query1 = 'SELECT g1.ICS3 AS ics, COUNT(g1.ICS3) AS count
       GROUP BY g1.ICS3
       ORDER BY count DESC;';
 
-$result = mysqli_query($link, $query1);
+$result = $pdo->query($query1);
 if (!$result)
 {
-    $output = 'Error fetching XYZ: ' . mysqli_error($link);
+    $output = 'Error fetching XYZ: ';
     include $includes . 'error.html.php';
     exit();
 }
 
-while ($row = mysqli_fetch_array($result))
+while ($row = $result->fetch())
 {
    $ics1[] = $row['ics'];
    $count1[] = $row['count'];
@@ -86,15 +87,15 @@ $query2 = 'SELECT g1.ICS3 AS ics, COUNT(g1.ICS3) AS count
       GROUP BY g1.ICS3
       ORDER BY count DESC;';
 
-$result = mysqli_query($link, $query2);
+$result = $pdo->query($query2);
 if (!$result)
 {
-    $output = 'Error fetching XYZ: ' . mysqli_error($link);
+    $output = 'Error fetching XYZ: ';
     include $includes . 'error.html.php';
     exit();
 }
 
-while ($row = mysqli_fetch_array($result))
+while ($row = $result->fetch())
 {
    $ics2[] = $row['ics'];
    $count2[] = $row['count'];
